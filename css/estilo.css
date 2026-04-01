@@ -1570,6 +1570,9 @@ footer {
 
 
 /* ── PÁGINA DE CONTATO ── */
+.actived {
+  color: var(--vermelho)
+}
 .contact-template {
   background: url("../img/Contato.png") no-repeat center center/cover;
   padding: 100px 0 200px 0; /* Espaço para os cards flutuarem */
