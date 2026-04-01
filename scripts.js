@@ -10,11 +10,11 @@ function ajustarQtd(btn, delta) {
 // Retorna lista de itens selecionados
 function getSelectedItems() {
   return Array.from(document.querySelectorAll(".orc-item"))
-    .map(item => ({
+    .map((item) => ({
       nome: item.dataset.nome,
-      qtd: parseInt(item.querySelector(".qtd-num").textContent, 10)
+      qtd: parseInt(item.querySelector(".qtd-num").textContent, 10),
     }))
-    .filter(item => item.qtd > 0);
+    .filter((item) => item.qtd > 0);
 }
 
 // Atualiza resumo na tela
@@ -25,7 +25,12 @@ function atualizarResumo() {
   const qtd = items.reduce((total, i) => total + i.qtd, 0);
 
   const linhas = items.length
-    ? items.map(i => `<div class="resumo-linha"><span>${i.nome} ×${i.qtd}</span></div>`).join("")
+    ? items
+        .map(
+          (i) =>
+            `<div class="resumo-linha"><span>${i.nome} ×${i.qtd}</span></div>`,
+        )
+        .join("")
     : '<div class="resumo-linha"><span>Nenhum item selecionado</span></div>';
 
   document.getElementById("resumo-itens").innerHTML = linhas;
@@ -36,7 +41,7 @@ function atualizarResumo() {
 document.addEventListener("DOMContentLoaded", () => {
   const telInput = document.getElementById("cliente-tel");
   if (telInput) {
-    telInput.addEventListener("input", e => {
+    telInput.addEventListener("input", (e) => {
       let valor = e.target.value.replace(/\D/g, "");
       if (valor.length > 2) {
         valor = "(" + valor.substring(0, 2) + ") " + valor.substring(2);
@@ -47,7 +52,6 @@ document.addEventListener("DOMContentLoaded", () => {
       e.target.value = valor;
     });
   }
-
 
   window.enviarWhatsApp = () => {
     const nome = document.getElementById("cliente-nome")?.value.trim() || "";
@@ -62,7 +66,7 @@ document.addEventListener("DOMContentLoaded", () => {
     let msg = "*Olá! Gostaria de fazer um orçamento com a Fabão Gás.*\n\n";
     msg += "Aqui estão os produtos que selecionei:\n\n";
 
-    items.forEach(i => {
+    items.forEach((i) => {
       msg += `• ${i.nome} — ${i.qtd} unidade(s)\n`;
     });
 
@@ -76,11 +80,14 @@ document.addEventListener("DOMContentLoaded", () => {
     msg += "Aguardo seu retorno para confirmar o pedido. Muito obrigado!";
 
     const numero = "5591985974371";
-    window.open(`https://wa.me/${numero}?text=${encodeURIComponent(msg)}`, "_blank");
+    window.open(
+      `https://wa.me/${numero}?text=${encodeURIComponent(msg)}`,
+      "_blank",
+    );
   };
 
   // MODAL PRODUTOS
-  window.openProductModal = card => {
+  window.openProductModal = (card) => {
     const modal = document.getElementById("product-modal");
     if (!modal) {
       alert("Modal não encontrado!");
@@ -96,7 +103,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const features = (card.dataset.features || "").split(";").filter(Boolean);
     const featureList = modal.querySelector(".modal-features");
-    featureList.innerHTML = features.map(f => `<li>${f.trim()}</li>`).join("");
+    featureList.innerHTML = features
+      .map((f) => `<li>${f.trim()}</li>`)
+      .join("");
 
     modal.classList.add("open");
     modal.setAttribute("aria-hidden", "false");
@@ -111,7 +120,7 @@ document.addEventListener("DOMContentLoaded", () => {
   };
 
   // Event listeners modais
-  document.querySelectorAll(".prod-info-btn").forEach(btn => {
+  document.querySelectorAll(".prod-info-btn").forEach((btn) => {
     btn.addEventListener("click", () => {
       const card = btn.closest(".prod-card");
       openProductModal(card);
@@ -123,8 +132,29 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const modalOverlay = document.getElementById("product-modal");
   if (modalOverlay) {
-    modalOverlay.addEventListener("click", e => {
+    modalOverlay.addEventListener("click", (e) => {
       if (e.target === modalOverlay) closeProductModal();
+    });
+  }
+
+  // Hamburger menu toggle
+  const hamburger = document.querySelector(".hamburger");
+  const nav = document.querySelector("nav");
+  if (hamburger && nav) {
+    hamburger.addEventListener("click", () => {
+      const isOpen = hamburger.getAttribute("aria-expanded") === "true";
+      hamburger.setAttribute("aria-expanded", !isOpen);
+      nav.classList.toggle("mobile-open");
+      hamburger.classList.toggle("open");
+    });
+
+    // Close menu on link click
+    nav.querySelectorAll("a").forEach((link) => {
+      link.addEventListener("click", () => {
+        hamburger.setAttribute("aria-expanded", "false");
+        nav.classList.remove("mobile-open");
+        hamburger.classList.remove("open");
+      });
     });
   }
 });
