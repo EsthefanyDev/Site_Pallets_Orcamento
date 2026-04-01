@@ -157,4 +157,30 @@ document.addEventListener("DOMContentLoaded", () => {
       });
     });
   }
+
+  // SCROLL REVEAL ANIMATIONS
+  const scrollObserver = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("animate");
+          scrollObserver.unobserve(entry.target); // one-time animation
+        }
+      });
+    },
+    {
+      threshold: 0.15,
+      rootMargin: "0px 0px -10% 0px",
+    },
+  );
+
+  // Observe elements
+  document.querySelectorAll(".scroll-reveal").forEach((el) => {
+    scrollObserver.observe(el);
+  });
+
+  // Stagger effect for grids
+  document.querySelectorAll(".scroll-reveal.stagger").forEach((el, i) => {
+    el.style.setProperty("--stagger-index", i);
+  });
 });
