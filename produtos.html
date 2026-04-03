@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Veja nossa linha de pallets PBR, Euro, longarinas e chapas. Pallets de pinus e eucalipto para transporte, construção e indústria no Pará."
+    />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://fabaogas.com.br/produtos.html" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://fabaogas.com.br/produtos.html" />
+    <meta
+      property="og:title"
+      content="Catálogo de Pallets PBR e Eucalipto | Fabão Gás"
+    />
+    <meta
+      property="og:description"
+      content="Pallets novos e reformados para todos os segmentos industriais. Qualidade garantida em Benevides."
+    />
+    <meta property="og:image" content="img/Logo.png" />
+
+    <title>Catálogo de Pallets PBR e Eucalipto | Fabão Gás</title>
+
+    <link rel="stylesheet" href="css/estilo.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600&family=Barlow+Condensed:wght@600;700;800&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <header class="navbar">
+      <a href="index.html" class="logo">
+        <div class="logo-icon">
+          <i class="fa-solid fa-box" style="color: var(--azul)"></i>
+        </div>
+        <div class="logo-text">PALLETS<span>BR</span></div>
+      </a>
+      <nav>
+        <a href="index.html">Início</a>
+        <a href="produtos.html" class="active">Produtos</a>
+        <a href="contato.html">Contato</a>
+        <a href="orcamento.html" class="btn-orcamento">Meu Orçamento</a>
+      </nav>
+    </header>
+
+    <section id="produtos">
+      <div class="container">
+        <div class="sec-tag">Nosso Catálogo</div>
+        <h2 class="sec-title">Pallets Novos e Reformados</h2>
+        <p class="sec-sub">
+          Selecione os produtos para adicionar ao seu orçamento.
+        </p>
+
+        <div class="produtos-grid">
+          <!-- Exemplo de Card de Produto -->
+          <div class="prod-card">
+            <div class="prod-icon">
+              <img src="img/palete.png" alt="Pallet Padrão" />
+            </div>
+            <h3 class="prod-nome">Pallet Padrão PBR</h3>
+            <p class="prod-uso">
+              Ideal para armazenamento em porta-pallets e transporte em geral.
+            </p>
+            <span class="prod-badge badge-azul">Madeira Pinus</span>
+            <button class="prod-info-btn">Ver Detalhes</button>
+          </div>
+
+          <div class="prod-card">
+            <div class="prod-icon">
+              <img src="img/palete.png" alt="Pallet Europeu" />
+            </div>
+            <h3 class="prod-nome">Pallet Euro (EPAL)</h3>
+            <p class="prod-uso">
+              Certificado para exportação e alta durabilidade.
+            </p>
+            <span class="prod-badge badge-vermelho">Madeira Eucalipto</span>
+            <button class="prod-info-btn">Ver Detalhes</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Modal de Detalhes (Baseado no seu CSS) -->
+    <div class="modal-overlay" id="productModal">
+      <div class="modal-content">
+        <button class="modal-close">&times;</button>
+        <div class="modal-head">
+          <div class="modal-image">
+            <img src="img/palete.png" alt="Produto" />
+          </div>
+          <div>
+            <span class="modal-category">Categoria: Novo</span>
+            <h2 class="modal-title">Pallet Padrão PBR</h2>
+          </div>
+        </div>
+        <div class="modal-body">
+          <div class="modal-description">
+            <p class="modal-text">
+              O pallet PBR é o padrão brasileiro, desenvolvido para otimizar o
+              armazenamento e transporte de cargas em todo o território
+              nacional. Fabricado com madeira de reflorestamento de alta
+              qualidade.
+            </p>
+          </div>
+          <div class="modal-details">
+            <h4>Especificações</h4>
+            <ul class="modal-features">
+              <li>Dimensões: 1000 x 1200 mm</li>
+              <li>Capacidade Estática: 2500kg</li>
+              <li>Capacidade Dinâmica: 1200kg</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      const modal = document.getElementById("productModal");
+      const openBtns = document.querySelectorAll(".prod-info-btn");
+      const closeBtn = document.querySelector(".modal-close");
+
+      openBtns.forEach((btn) => {
+        btn.addEventListener("click", () => modal.classList.add("open"));
+      });
+
+      closeBtn.addEventListener("click", () => modal.classList.remove("open"));
+
+      window.addEventListener("click", (e) => {
+        if (e.target === modal) modal.classList.remove("open");
+      });
+    </script>
+  </body>
+</html>
