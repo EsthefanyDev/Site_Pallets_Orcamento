@@ -34,108 +34,328 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
     />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <header class="navbar">
       <a href="index.html" class="logo">
         <div class="logo-icon">
-          <i class="fa-solid fa-box" style="color: var(--azul)"></i>
+          <img src="img/Logo.png" alt="Logo Fabão Gás" width="50px" />
         </div>
-        <div class="logo-text">PALLETS<span>BR</span></div>
+        <span class="logo-text"><span>FABÃO</span>GÁS</span>
       </a>
-      <nav>
-        <a href="index.html">Início</a>
+      <nav id="nav-menu">
+        <a href="index.html">Home</a>
+        <a href="sobre.html">Sobre</a>
         <a href="produtos.html" class="active">Produtos</a>
+        <a href="orcamento.html">Orçamento</a>
         <a href="contato.html">Contato</a>
-        <a href="orcamento.html" class="btn-orcamento">Meu Orçamento</a>
       </nav>
+      <a href="orcamento.html" class="btn-orcamento">Fazer orçamento</a>
+      <button class="hamburger" id="menu-toggle" aria-label="Abrir menu">
+        <span></span><span></span><span></span>
+      </button>
     </header>
 
-    <section id="produtos">
+    <section id="produtos" class="scroll-reveal">
       <div class="container">
-        <div class="sec-tag">Nosso Catálogo</div>
-        <h2 class="sec-title">Pallets Novos e Reformados</h2>
+        <div class="sec-tag">Catálogo completo</div>
+        <h2 class="sec-title">Nossos produtos</h2>
         <p class="sec-sub">
-          Selecione os produtos para adicionar ao seu orçamento.
+          Pallets e derivados para todos os segmentos — alimentos, construção,
+          química e logística.
         </p>
 
-        <div class="produtos-grid">
-          <!-- Exemplo de Card de Produto -->
-          <div class="prod-card">
+        <div class="produtos-grid stagger">
+          <div
+            class="prod-card"
+            data-title="Pallet PBR"
+            data-category="Padrão brasileiro"
+            data-detail="Pallet PBR padrão ABNT 1200×1000 mm, indicado para cargas secas e armazenagem."
+            data-features="1200 × 1000 mm; Madeira tratada; Capacidade 1200 kg"
+          >
             <div class="prod-icon">
-              <img src="img/palete.png" alt="Pallet Padrão" />
+              <img src="img/pallet_de_madeira_.png" alt="Pallet PBR" />
             </div>
-            <h3 class="prod-nome">Pallet Padrão PBR</h3>
+            <div class="prod-nome">Pallet PBR</div>
             <p class="prod-uso">
-              Ideal para armazenamento em porta-pallets e transporte em geral.
+              Padrão ABNT para todo o Brasil. Ideal para logística em geral.
             </p>
-            <span class="prod-badge badge-azul">Madeira Pinus</span>
-            <button class="prod-info-btn">Ver Detalhes</button>
+            <span class="prod-badge badge-azul">Padrão brasileiro</span>
+            <div
+              class="orc-qtd"
+              style="margin-top: 15px; justify-content: center"
+            >
+              <button
+                class="qtd-btn"
+                type="button"
+                onclick="ajustarQtd(this, -1)"
+              >
+                −
+              </button>
+              <input type="number" class="qtd-num" min="1" value="1" />
+              <button
+                class="qtd-btn"
+                type="button"
+                onclick="ajustarQtd(this, 1)"
+              >
+                +
+              </button>
+            </div>
+            <button class="prod-info-btn" type="button">
+              Mais informações
+            </button>
+            <button class="btn-add-orc" type="button">
+              <i class="bx bx-plus-circle"></i> Adicionar ao Orçamento
+            </button>
           </div>
 
-          <div class="prod-card">
+          <div
+            class="prod-card"
+            data-title="Pallet de cimento"
+            data-category="Construção civil"
+            data-detail="Pallet de alta resistência para cimento e cargas pesadas da construção civil."
+            data-features="Alta resistência; Uso industrial; Madeira dura"
+          >
             <div class="prod-icon">
-              <img src="img/palete.png" alt="Pallet Europeu" />
+              <img src="img/pallet_de_madeira_.png" alt="Pallet de cimento" />
             </div>
-            <h3 class="prod-nome">Pallet Euro (EPAL)</h3>
+            <div class="prod-nome">Pallet de cimento</div>
             <p class="prod-uso">
-              Certificado para exportação e alta durabilidade.
+              Alta resistência para materiais de construção e cargas pesadas.
             </p>
-            <span class="prod-badge badge-vermelho">Madeira Eucalipto</span>
-            <button class="prod-info-btn">Ver Detalhes</button>
+            <span class="prod-badge badge-cinza">Construção civil</span>
+            <div
+              class="orc-qtd"
+              style="margin-top: 15px; justify-content: center"
+            >
+              <button
+                class="qtd-btn"
+                type="button"
+                onclick="ajustarQtd(this, -1)"
+              >
+                −
+              </button>
+              <input type="number" class="qtd-num" min="1" value="1" />
+              <button
+                class="qtd-btn"
+                type="button"
+                onclick="ajustarQtd(this, 1)"
+              >
+                +
+              </button>
+            </div>
+            <button class="prod-info-btn" type="button">
+              Mais informações
+            </button>
+            <button class="btn-add-orc" type="button">
+              <i class="bx bx-plus-circle"></i> Adicionar ao Orçamento
+            </button>
+          </div>
+
+          <div
+            class="prod-card"
+            data-title="Pallet de pinho"
+            data-category="Câmara fria"
+            data-detail="Pallet de pinho selecionado para câmara fria e produtos refrigerados."
+            data-features="Baixa umidade; Resistente ao frio; Pinho selecionado"
+          >
+            <div class="prod-icon">
+              <img src="img/pallet_de_madeira_.png" alt="Pallet de pinho" />
+            </div>
+            <div class="prod-nome">Pallet de pinho</div>
+            <p class="prod-uso">
+              Ideal para sorvetes, frango e outros produtos em câmara fria.
+            </p>
+            <span class="prod-badge badge-azul">Câmara fria</span>
+            <div
+              class="orc-qtd"
+              style="margin-top: 15px; justify-content: center"
+            >
+              <button
+                class="qtd-btn"
+                type="button"
+                onclick="ajustarQtd(this, -1)"
+              >
+                −
+              </button>
+              <input type="number" class="qtd-num" min="1" value="1" />
+              <button
+                class="qtd-btn"
+                type="button"
+                onclick="ajustarQtd(this, 1)"
+              >
+                +
+              </button>
+            </div>
+            <button class="prod-info-btn" type="button">
+              Mais informações
+            </button>
+            <button class="btn-add-orc" type="button">
+              <i class="bx bx-plus-circle"></i> Adicionar ao Orçamento
+            </button>
+          </div>
+
+          <div
+            class="prod-card"
+            data-title="Pallet longarina"
+            data-category="Químicos"
+            data-detail="Pallet de longarina reforçada para tambores e embalagens de produtos químicos."
+            data-features="Estrutura reforçada; Maior estabilidade; Uso químico"
+          >
+            <div class="prod-icon">
+              <img src="img/pallet_de_madeira_.png" alt="Pallet longarina" />
+            </div>
+            <div class="prod-nome">Pallet longarina</div>
+            <p class="prod-uso">
+              Reforçado para produtos químicos, cera e derivados pesados.
+            </p>
+            <span class="prod-badge badge-vermelho">Químicos</span>
+            <div
+              class="orc-qtd"
+              style="margin-top: 15px; justify-content: center"
+            >
+              <button
+                class="qtd-btn"
+                type="button"
+                onclick="ajustarQtd(this, -1)"
+              >
+                −
+              </button>
+              <input type="number" class="qtd-num" min="1" value="1" />
+              <button
+                class="qtd-btn"
+                type="button"
+                onclick="ajustarQtd(this, 1)"
+              >
+                +
+              </button>
+            </div>
+            <button class="prod-info-btn" type="button">
+              Mais informações
+            </button>
+            <button class="btn-add-orc" type="button">
+              <i class="bx bx-plus-circle"></i> Adicionar ao Orçamento
+            </button>
+          </div>
+
+          <div
+            class="prod-card"
+            data-title="Chapa Texi"
+            data-category="Derivados"
+            data-detail="Chapa Texi para móveis, painéis e estruturas leves."
+            data-features="Fácil corte; Acabamento liso; Uso em mobiliário"
+          >
+            <div class="prod-icon">
+              <img src="img/pallet_de_madeira_.png" alt="Chapa Texi" />
+            </div>
+            <div class="prod-nome">Chapa Texi</div>
+            <p class="prod-uso">
+              Utilizada para fundos de guarda-roupas e painéis de móveis.
+            </p>
+            <span class="prod-badge badge-cinza">Derivados</span>
+            <div
+              class="orc-qtd"
+              style="margin-top: 15px; justify-content: center"
+            >
+              <button
+                class="qtd-btn"
+                type="button"
+                onclick="ajustarQtd(this, -1)"
+              >
+                −
+              </button>
+              <input type="number" class="qtd-num" min="1" value="1" />
+              <button
+                class="qtd-btn"
+                type="button"
+                onclick="ajustarQtd(this, 1)"
+              >
+                +
+              </button>
+            </div>
+            <button class="prod-info-btn" type="button">
+              Mais informações
+            </button>
+            <button class="btn-add-orc" type="button">
+              <i class="bx bx-plus-circle"></i> Adicionar ao Orçamento
+            </button>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Modal de Detalhes (Baseado no seu CSS) -->
-    <div class="modal-overlay" id="productModal">
-      <div class="modal-content">
-        <button class="modal-close">&times;</button>
+    <div class="modal-overlay" id="product-modal" aria-hidden="true">
+      <div class="modal-content" role="dialog" aria-modal="true">
+        <button class="modal-close" type="button">×</button>
         <div class="modal-head">
           <div class="modal-image">
-            <img src="img/palete.png" alt="Produto" />
+            <img src="img/pallet_de_madeira_.png" alt="Produto" />
           </div>
           <div>
-            <span class="modal-category">Categoria: Novo</span>
-            <h2 class="modal-title">Pallet Padrão PBR</h2>
+            <h3 class="modal-title"></h3>
+            <p class="modal-category prod-badge"></p>
           </div>
         </div>
         <div class="modal-body">
-          <div class="modal-description">
-            <p class="modal-text">
-              O pallet PBR é o padrão brasileiro, desenvolvido para otimizar o
-              armazenamento e transporte de cargas em todo o território
-              nacional. Fabricado com madeira de reflorestamento de alta
-              qualidade.
-            </p>
-          </div>
+          <div class="modal-description"><p class="modal-text"></p></div>
           <div class="modal-details">
-            <h4>Especificações</h4>
-            <ul class="modal-features">
-              <li>Dimensões: 1000 x 1200 mm</li>
-              <li>Capacidade Estática: 2500kg</li>
-              <li>Capacidade Dinâmica: 1200kg</li>
-            </ul>
+            <h4>Características</h4>
+            <ul class="modal-features"></ul>
           </div>
         </div>
       </div>
     </div>
 
-    <script>
-      const modal = document.getElementById("productModal");
-      const openBtns = document.querySelectorAll(".prod-info-btn");
-      const closeBtn = document.querySelector(".modal-close");
+    <footer>
+      <div class="container footer-grid">
+        <div class="footer-col">
+          <a href="index.html" class="logo">
+            <div class="logo-icon">
+              <img src="img/Logo.png" alt="Logo" width="40" />
+            </div>
+            <span class="logo-text"><span>FABÃO</span>GÁS</span>
+          </a>
+          <p class="footer-desc">
+            Sua parceira em pallets industriais em Benevides e região.
+          </p>
+          <div class="footer-socials">
+            <a href="#"><i class="bx bxl-instagram"></i></a>
+            <a href="#"><i class="bx bxl-facebook-circle"></i></a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4 class="footer-title">Navegação</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Início</a></li>
+            <li><a href="produtos.html">Produtos</a></li>
+            <li><a href="orcamento.html">Orçamento</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4 class="footer-title">Atendimento</h4>
+          <ul class="footer-contact">
+            <li>
+              <i class="bx bx-map"></i> Av. Costa e Silva n° 225, Benevides - PA
+            </li>
+            <li><i class="bx bx-phone"></i> (91) 9 8591-1141</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p class="footer-copy">© 2024 Fabão Comércio e Distribuição LTDA</p>
+      </div>
+    </footer>
 
-      openBtns.forEach((btn) => {
-        btn.addEventListener("click", () => modal.classList.add("open"));
-      });
+    <!-- ELEMENTOS FLUTUANTES -->
+    <a href="orcamento.html" class="quote-float" title="Revisar Orçamento">
+      <i class="bx bx-list-check"></i>
+      <span>Revisar orçamento</span>
+    </a>
 
-      closeBtn.addEventListener("click", () => modal.classList.remove("open"));
-
-      window.addEventListener("click", (e) => {
-        if (e.target === modal) modal.classList.remove("open");
-      });
-    </script>
+    <script src="scripts.js"></script>
   </body>
 </html>

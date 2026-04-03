@@ -517,6 +517,33 @@ section {
   border-color: rgba(41, 35, 92, 0.18);
 }
 
+.btn-add-orc {
+  margin-top: 10px;
+  width: 100%;
+  background: var(--vermelho);
+  color: var(--branco);
+  border: none;
+  border-radius: 12px;
+  padding: 12px;
+  font-family: "Barlow Condensed", sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.btn-add-orc:hover {
+  background: var(--vermelho-escuro);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(190, 22, 34, 0.25);
+}
+
 .modal-overlay {
   position: fixed;
   inset: 0;
@@ -1392,6 +1419,41 @@ footer {
   background-color: var(--vermelho-escuro);
 }
 
+/* ── REVISAR ORÇAMENTO FLUTUANTE ── */
+.quote-float {
+  position: fixed;
+  height: 50px;
+  bottom: 152px; /* Posicionado acima do botão de mapa */
+  right: 28px;
+  background-color: var(--azul);
+  color: var(--branco);
+  border-radius: 30px;
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  z-index: 1000;
+  box-shadow: 0 4px 16px rgba(41, 35, 92, 0.4);
+  transition: transform 0.2s, background 0.3s;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 700;
+  font-family: "Barlow Condensed", sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border: 2px solid rgba(255, 255, 255, 0.1);
+}
+
+.quote-float i {
+  font-size: 22px;
+}
+
+.quote-float:hover {
+  transform: scale(1.1);
+  background-color: var(--azul-claro);
+}
+
 /* ── WHATSAPP FLUTUANTE ── */
 .wpp-float {
   position: fixed;
@@ -1771,6 +1833,14 @@ footer {
   .map-float {
     bottom: clamp(80px, 15vh, 100px);
   }
+
+  .quote-float {
+    bottom: clamp(140px, 22vh, 170px);
+    width: 55px;
+    padding: 0;
+    border-radius: 50%;
+  }
+  .quote-float span { display: none; }
 }
 
 @media (max-width: 768px) {
@@ -2014,4 +2084,35 @@ footer {
     padding: 2rem 1rem;
     margin-bottom: 2rem;
   }
+}
+
+/* ── TOAST NOTIFICATION ── */
+.toast-notification {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background: var(--azul-escuro);
+  color: var(--branco);
+  padding: 16px 24px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  z-index: 10000;
+  transform: translateX(150%);
+  transition: transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  border-left: 4px solid var(--vermelho);
+  font-family: "Barlow", sans-serif;
+  font-weight: 500;
+  pointer-events: none;
+}
+
+.toast-notification.show {
+  transform: translateX(0);
+}
+
+.toast-notification i {
+  color: var(--vermelho);
+  font-size: 22px;
 }

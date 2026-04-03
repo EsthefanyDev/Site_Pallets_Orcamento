@@ -39,105 +39,53 @@
     <header class="navbar">
       <a href="index.html" class="logo">
         <div class="logo-icon">
-          <i class="fa-solid fa-box" style="color: var(--azul)"></i>
+          <img src="img/Logo.png" alt="Logo" width="50" />
         </div>
-        <div class="logo-text">PALLETS<span>BR</span></div>
+        <span class="logo-text"><span>FABÃO</span>GÁS</span>
       </a>
-      <nav>
-        <a href="index.html">Início</a>
+      <nav id="nav-menu">
+        <a href="index.html">Home</a>
+        <a href="sobre.html">Sobre</a>
         <a href="produtos.html">Produtos</a>
+        <a href="orcamento.html" class="active">Orçamento</a>
         <a href="contato.html">Contato</a>
-        <a href="orcamento.html" class="btn-orcamento">Meu Orçamento</a>
       </nav>
+      <button class="hamburger" id="menu-toggle">
+        <span></span><span></span><span></span>
+      </button>
     </header>
 
-    <section id="orcamento">
+    <section id="orcamento" class="scroll-reveal">
       <div class="container">
         <div class="sec-tag">Finalização</div>
         <h2 class="sec-title">Revise seu Pedido</h2>
 
         <div class="orc-layout">
-          <div class="orc-lista">
-            <!-- Item de Exemplo -->
-            <div class="orc-item">
-              <div class="prod-icon">
-                <img src="img/palete.png" alt="Pallet" />
-              </div>
-              <div class="orc-item-nome">
-                Pallet Padrão PBR
-                <div class="orc-item-dim">1000 x 1200 mm</div>
-              </div>
-              <div class="orc-qtd">
-                <button class="qtd-btn" aria-label="Remover uma unidade">
-                  −
-                </button>
-                <input
-                  type="number"
-                  class="qtd-num"
-                  value="10"
-                  aria-label="Quantidade do produto"
-                />
-                <button class="qtd-btn" aria-label="Adicionar uma unidade">
-                  +
-                </button>
-              </div>
-              <div class="orc-preco">Sob Consulta</div>
-            </div>
-
-            <div class="orc-item">
-              <div class="prod-icon">
-                <img src="img/palete.png" alt="Pallet" />
-              </div>
-              <div class="orc-item-nome">
-                Pallet Euro EPAL
-                <div class="orc-item-dim">800 x 1200 mm</div>
-              </div>
-              <div class="orc-qtd">
-                <button class="qtd-btn" aria-label="Remover uma unidade">
-                  −
-                </button>
-                <input
-                  type="number"
-                  class="qtd-num"
-                  value="5"
-                  aria-label="Quantidade do produto"
-                />
-                <button class="qtd-btn" aria-label="Adicionar uma unidade">
-                  +
-                </button>
-              </div>
-              <div class="orc-preco">Sob Consulta</div>
-            </div>
-          </div>
+          <div class="orc-lista" id="lista-orc"></div>
 
           <aside class="orc-resumo">
             <h3 class="orc-resumo-title">Resumo do Orçamento</h3>
-            <div class="resumo-linha">
-              <span>Itens selecionados:</span>
-              <span class="resumo-val">2 tipos</span>
-            </div>
+            <div id="resumo-itens"></div>
+
             <div class="resumo-linha">
               <span>Quantidade total:</span>
-              <span class="resumo-val">15 unidades</span>
-            </div>
-
-            <div class="resumo-total">
-              <span class="resumo-total-lbl">Total estimado</span>
-              <span class="resumo-total-val">R$ ---</span>
+              <span class="resumo-val" id="total-val">0</span>
             </div>
 
             <input
               type="text"
               class="orc-nome-input"
-              placeholder="Seu Nome Completo"
+              id="cliente-nome"
+              placeholder="Seu Nome ou Empresa"
             />
             <input
-              type="email"
+              type="tel"
               class="orc-nome-input"
-              placeholder="Seu E-mail"
+              id="cliente-tel"
+              placeholder="Telefone (WhatsApp)"
             />
 
-            <button class="btn-whatsapp">
+            <button class="btn-whatsapp" onclick="enviarWhatsApp()">
               <i class="fa-brands fa-whatsapp"></i>
               Enviar via WhatsApp
             </button>
@@ -145,5 +93,7 @@
         </div>
       </div>
     </section>
+
+    <script src="scripts.js"></script>
   </body>
 </html>

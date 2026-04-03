@@ -1,3 +1,9 @@
+// Gerenciamento do Carrinho/Orçamento (localStorage)
+const getOrcamento = () =>
+  JSON.parse(localStorage.getItem("fabaogas_orcamento") || "[]");
+const saveOrcamento = (itens) =>
+  localStorage.setItem("fabaogas_orcamento", JSON.stringify(itens));
+
 // Ajusta quantidade de itens
 function ajustarQtd(inputOrBtn, delta) {
   const input =
@@ -5,25 +11,38 @@ function ajustarQtd(inputOrBtn, delta) {
       ? inputOrBtn
       : inputOrBtn.closest(".orc-qtd").querySelector(".qtd-num");
   let qtd = parseInt(input.value || 0, 10);
-  qtd = Math.max(0, qtd + delta);
+
+  // Na página de produtos, o mínimo é 1. Na de orçamento, 0 remove o item.
+  const min = document.getElementById("lista-orc") ? 0 : 1;
+  qtd = Math.max(min, qtd + delta);
   input.value = qtd;
-  atualizarResumo();
+
+  // Se estivermos na página de orçamento, atualizamos o storage e a tela
+  if (document.getElementById("lista-orc")) {
+    const nome = inputOrBtn.closest(".orc-item").dataset.nome;
+    atualizarItemOrcamento(nome, qtd);
+  }
 }
 
-// Retorna lista de itens selecionados
-function getSelectedItems() {
-  return Array.from(document.querySelectorAll(".orc-item"))
-    .map((item) => {
-      const input = item.querySelector(".qtd-num");
-      const qtd = parseInt(input.value || 0, 10);
-      return { nome: item.dataset.nome, qtd };
-    })
-    .filter((item) => item.qtd > 0);
+function atualizarItemOrcamento(nome, qtd) {
+  let itens = getOrcamento();
+  if (qtd <= 0) {
+    itens = itens.filter((i) => i.nome !== nome);
+  } else {
+    const item = itens.find((i) => i.nome === nome);
+    if (item) item.qtd = qtd;
+  }
+  saveOrcamento(itens);
+  renderizarOrcamento();
 }
 
 // Atualiza resumo na tela
 function atualizarResumo() {
-  const items = getSelectedItems();
+  const items = getOrcamento();
+  const resumoContainer = document.getElementById("resumo-itens");
+  const totalVal = document.getElementById("total-val");
+
+  if (!resumoContainer || !totalVal) return;
 
   // soma todas as quantidades
   const qtd = items.reduce((total, i) => total + i.qtd, 0);
@@ -37,8 +56,8 @@ function atualizarResumo() {
         .join("")
     : '<div class="resumo-linha"><span>Nenhum item selecionado</span></div>';
 
-  document.getElementById("resumo-itens").innerHTML = linhas;
-  document.getElementById("total-val").innerHTML = qtd;
+  resumoContainer.innerHTML = linhas;
+  totalVal.innerHTML = qtd;
 }
 
 // Máscara telefone
@@ -65,10 +84,47 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
+  // Renderiza a lista na página de orçamento
+  const renderizarOrcamento = () => {
+    const lista = document.getElementById("lista-orc");
+    if (!lista) return;
+
+    const itens = getOrcamento();
+    lista.innerHTML =
+      itens
+        .map(
+          (i) => `
+      <div class="orc-item" data-nome="${i.nome}">
+        <div class="prod-icon" style="flex-shrink: 0; background: var(--cinza-claro)">
+          <img src="img/pallet_de_madeira_.png" alt="${i.nome}">
+        </div>
+        <div style="flex: 1">
+          <div class="orc-item-nome">${i.nome}</div>
+          <div class="orc-item-dim">${i.dim || ""}</div>
+        </div>
+        <div class="orc-qtd">
+          <button class="qtd-btn" onclick="ajustarQtd(this, -1)">−</button>
+          <input type="number" class="qtd-num" min="0" value="${i.qtd}" onchange="ajustarQtd(this, 0)">
+          <button class="qtd-btn" onclick="ajustarQtd(this, 1)">+</button>
+        </div>
+      </div>
+    `,
+        )
+        .join("") ||
+      '<p style="padding: 20px; color: var(--texto-muted)">Seu orçamento está vazio. Adicione produtos na galeria!</p>';
+
+    atualizarResumo();
+  };
+
+  // Se estiver na página de orçamento, renderiza ao carregar
+  if (document.getElementById("lista-orc")) {
+    renderizarOrcamento();
+  }
+
   window.enviarWhatsApp = () => {
     const nome = document.getElementById("cliente-nome")?.value.trim() || "";
     const tel = document.getElementById("cliente-tel")?.value.trim() || "";
-    const items = getSelectedItems();
+    const items = getOrcamento();
 
     if (!items.length) {
       alert("Adicione produtos!");
@@ -148,6 +204,45 @@ document.addEventListener("DOMContentLoaded", () => {
       if (e.target === modalOverlay) closeProductModal();
     });
   }
+
+  // Função para exibir Toast
+  const showToast = (message) => {
+    let toast = document.querySelector(".toast-notification");
+    if (!toast) {
+      toast = document.createElement("div");
+      toast.className = "toast-notification";
+      document.body.appendChild(toast);
+    }
+    toast.innerHTML = `<i class='bx bx-check-circle'></i> <span>${message}</span>`;
+    toast.classList.add("show");
+
+    // Remove a classe após 3 segundos
+    setTimeout(() => toast.classList.remove("show"), 3000);
+  };
+
+  // Botão Adicionar ao Orçamento (Toast e permanecer na tela)
+  document.querySelectorAll(".btn-add-orc").forEach((btn) => {
+    btn.addEventListener("click", (e) => {
+      e.stopPropagation();
+      const card = btn.closest(".prod-card");
+      const nome = card.dataset.title;
+      const dim = card.querySelector(".prod-uso").textContent.split(".")[0]; // Pega a primeira frase
+      const qtdInput = card.querySelector(".qtd-num");
+      const qtd = parseInt(qtdInput.value, 10);
+
+      let itens = getOrcamento();
+      const index = itens.findIndex((i) => i.nome === nome);
+
+      if (index > -1) {
+        itens[index].qtd += qtd;
+      } else {
+        itens.push({ nome, qtd, dim });
+      }
+
+      saveOrcamento(itens);
+      showToast(`${nome} adicionado ao orçamento!`);
+    });
+  });
 
   // Hamburger menu toggle
   const hamburger = document.querySelector(".hamburger");
