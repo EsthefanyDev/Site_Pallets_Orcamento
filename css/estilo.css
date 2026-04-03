@@ -738,7 +738,7 @@ section {
 .orc-qtd {
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 4px;
 }
 
 .qtd-btn {
@@ -766,8 +766,28 @@ section {
   font-size: 16px;
   font-weight: 700;
   color: var(--texto);
-  min-width: 24px;
+  width: 52px;
+  height: 28px;
   text-align: center;
+  border: 1.5px solid var(--cinza);
+  border-radius: 6px;
+  background: var(--branco);
+}
+
+.qtd-num:focus {
+  outline: none;
+  border-color: var(--azul);
+  box-shadow: 0 0 0 3px rgba(41, 35, 92, 0.1);
+}
+
+.qtd-num::-webkit-outer-spin-button,
+.qtd-num::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.qtd-num[type="number"] {
+  -moz-appearance: textfield;
 }
 
 .orc-preco {

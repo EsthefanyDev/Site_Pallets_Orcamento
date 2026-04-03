@@ -392,11 +392,9 @@
                 <div class="orc-item-dim">1200 × 1000 mm</div>
               </div>
               <div class="orc-qtd">
-                <button class="qtd-btn" onclick="ajustarQtd(this, -1)">
-                  −
-                </button>
-                <span class="qtd-num">0</span>
-                <button class="qtd-btn" onclick="ajustarQtd(this, 1)">+</button>
+                <button class="qtd-btn" onclick="ajustarQtd(this.parentElement.querySelector('.qtd-num'), -1)">−</button>
+                <input type="number" class="qtd-num" min="0" value="">
+                <button class="qtd-btn" onclick="ajustarQtd(this.parentElement.querySelector('.qtd-num'), 1)">+</button>
               </div>
               <!-- <div class="orc-preco">R$ 0</div> -->
             </div>
@@ -413,11 +411,9 @@
                 <div class="orc-item-dim">Sob medida</div>
               </div>
               <div class="orc-qtd">
-                <button class="qtd-btn" onclick="ajustarQtd(this, -1)">
-                  −
-                </button>
-                <span class="qtd-num">0</span>
-                <button class="qtd-btn" onclick="ajustarQtd(this, 1)">+</button>
+                <button class="qtd-btn" onclick="ajustarQtd(this.parentElement.querySelector('.qtd-num'), -1)">−</button>
+                <input type="number" class="qtd-num" min="0" value="">
+                <button class="qtd-btn" onclick="ajustarQtd(this.parentElement.querySelector('.qtd-num'), 1)">+</button>
               </div>
               <!-- <div class="orc-preco">R$ 0</div> -->
             </div>
@@ -434,11 +430,9 @@
                 <div class="orc-item-dim">Câmara fria</div>
               </div>
               <div class="orc-qtd">
-                <button class="qtd-btn" onclick="ajustarQtd(this, -1)">
-                  −
-                </button>
-                <span class="qtd-num">0</span>
-                <button class="qtd-btn" onclick="ajustarQtd(this, 1)">+</button>
+                <button class="qtd-btn" onclick="ajustarQtd(this.parentElement.querySelector('.qtd-num'), -1)">−</button>
+                <input type="number" class="qtd-num" min="0" value="">
+                <button class="qtd-btn" onclick="ajustarQtd(this.parentElement.querySelector('.qtd-num'), 1)">+</button>
               </div>
               <!-- <div class="orc-preco">R$ 0</div> -->
             </div>
@@ -455,11 +449,9 @@
                 <div class="orc-item-dim">Químicos</div>
               </div>
               <div class="orc-qtd">
-                <button class="qtd-btn" onclick="ajustarQtd(this, -1)">
-                  −
-                </button>
-                <span class="qtd-num">0</span>
-                <button class="qtd-btn" onclick="ajustarQtd(this, 1)">+</button>
+                <button class="qtd-btn" onclick="ajustarQtd(this.parentElement.querySelector('.qtd-num'), -1)">−</button>
+                <input type="number" class="qtd-num" min="0" value="">
+                <button class="qtd-btn" onclick="ajustarQtd(this.parentElement.querySelector('.qtd-num'), 1)">+</button>
               </div>
               <!-- <div class="orc-preco">R$ 0</div> -->
             </div>
@@ -475,33 +467,26 @@
                 <div class="orc-item-nome">Chapa Texi</div>
                 <div class="orc-item-dim">Derivado</div>
               </div>
-              <div class="orc-qtd">
-                <button class="qtd-btn" onclick="ajustarQtd(this, -1)">
-                  −
-                </button>
-                <span class="qtd-num">0</span>
-                <button class="qtd-btn" onclick="ajustarQtd(this, 1)">+</button>
+             <div class="orc-qtd">
+                <button class="qtd-btn" onclick="ajustarQtd(this.parentElement.querySelector('.qtd-num'), -1)">−</button>
+                <input type="number" class="qtd-num" min="0" value="">
+                <button class="qtd-btn" onclick="ajustarQtd(this.parentElement.querySelector('.qtd-num'), 1)">+</button>
               </div>
               <!-- <div class="orc-preco">R$ 0</div> -->
             </div>
 
             <div class="orc-item" data-nome="Madeirits" data-preco="45">
-              <div
-                class="prod-icon"
-                style="flex-shrink: 0; background: var(--cinza-claro)"
-              >
+              <div class="prod-icon" style="flex-shrink: 0; background: var(--cinza-claro)">
                 <img src="img/pallet_de_madeira_.png" alt="Madeirits" />
               </div>
               <div style="flex: 1">
                 <div class="orc-item-nome">Madeirits</div>
                 <div class="orc-item-dim">Assoalho caminhão</div>
               </div>
-              <div class="orc-qtd">
-                <button class="qtd-btn" onclick="ajustarQtd(this, -1)">
-                  −
-                </button>
-                <span class="qtd-num">0</span>
-                <button class="qtd-btn" onclick="ajustarQtd(this, 1)">+</button>
+             <div class="orc-qtd">
+                <button class="qtd-btn" onclick="ajustarQtd(this.parentElement.querySelector('.qtd-num'), -1)">−</button>
+                <input type="number" class="qtd-num" min="0" value="">
+                <button class="qtd-btn" onclick="ajustarQtd(this.parentElement.querySelector('.qtd-num'), 1)">+</button>
               </div>
               <!-- <div class="orc-preco">R$ 0</div> -->
             </div>
@@ -524,12 +509,10 @@
                 <div class="orc-item-nome">Pallet descartável</div>
                 <div class="orc-item-dim">Uso único</div>
               </div>
-              <div class="orc-qtd">
-                <button class="qtd-btn" onclick="ajustarQtd(this, -1)">
-                  −
-                </button>
-                <span class="qtd-num">0</span>
-                <button class="qtd-btn" onclick="ajustarQtd(this, 1)">+</button>
+             <div class="orc-qtd">
+                <button class="qtd-btn" onclick="ajustarQtd(this.parentElement.querySelector('.qtd-num'), -1)">−</button>
+                <input type="number" class="qtd-num" min="0" value="">
+                <button class="qtd-btn" onclick="ajustarQtd(this.parentElement.querySelector('.qtd-num'), 1)">+</button>
               </div>
               <!-- <div class="orc-preco">R$ 0</div> -->
             </div>

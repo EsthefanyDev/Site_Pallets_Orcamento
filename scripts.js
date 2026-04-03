@@ -1,19 +1,23 @@
 // Ajusta quantidade de itens
-function ajustarQtd(btn, delta) {
-  const item = btn.closest(".orc-item");
-  const span = item.querySelector(".qtd-num");
-  const qtd = Math.max(0, parseInt(span.textContent, 10) + delta);
-  span.textContent = qtd;
+function ajustarQtd(inputOrBtn, delta) {
+  const input =
+    inputOrBtn.tagName === "INPUT"
+      ? inputOrBtn
+      : inputOrBtn.closest(".orc-qtd").querySelector(".qtd-num");
+  let qtd = parseInt(input.value || 0, 10);
+  qtd = Math.max(0, qtd + delta);
+  input.value = qtd;
   atualizarResumo();
 }
 
 // Retorna lista de itens selecionados
 function getSelectedItems() {
   return Array.from(document.querySelectorAll(".orc-item"))
-    .map((item) => ({
-      nome: item.dataset.nome,
-      qtd: parseInt(item.querySelector(".qtd-num").textContent, 10),
-    }))
+    .map((item) => {
+      const input = item.querySelector(".qtd-num");
+      const qtd = parseInt(input.value || 0, 10);
+      return { nome: item.dataset.nome, qtd };
+    })
     .filter((item) => item.qtd > 0);
 }
 
@@ -39,6 +43,14 @@ function atualizarResumo() {
 
 // Máscara telefone
 document.addEventListener("DOMContentLoaded", () => {
+  // Add event listeners for quantity inputs
+  document.querySelectorAll(".qtd-num").forEach((input) => {
+    input.addEventListener("input", atualizarResumo);
+    input.addEventListener("change", () => {
+      if (input.value < 0) input.value = 0;
+      atualizarResumo();
+    });
+  });
   const telInput = document.getElementById("cliente-tel");
   if (telInput) {
     telInput.addEventListener("input", (e) => {
