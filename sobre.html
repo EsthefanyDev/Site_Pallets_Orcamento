@@ -30,14 +30,12 @@
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600&family=Barlow+Condensed:wght@600;700;800&display=swap"
     />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-    />
-    <link
-      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
-      rel="stylesheet"
-    />
+    
+    <!-- Phosphor Icons -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+
+    <!-- Tabler Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/dist/tabler-icons.min.css" />
   </head>
   <body>
     <!-- NAVBAR -->
@@ -98,11 +96,16 @@
     <section class="container scroll-reveal">
       <div class="contato-layout" style="align-items: center">
         <div class="contato-info">
-          <div class="sec-tag" style="color: var(--vermelho)">Nossa Essência</div>
+          <div class="sec-tag" style="color: var(--vermelho)">
+            Nossa Essência
+          </div>
           <h2 class="sec-title" style="color: var(--azul)">
             Fundada em 2021 com foco no futuro da logística
           </h2>
-          <p class="sec-sub" style="color: var(--texto); max-width: 100%; margin-top: 10px;">
+          <p
+            class="sec-sub"
+            style="color: var(--texto); max-width: 100%; margin-top: 10px"
+          >
             A <strong>Fabão Comércio e Distribuição LTDA</strong> surgiu da
             necessidade de oferecer ao mercado paraense um produto que unisse
             resistência técnica a um preço justo. Operamos hoje com uma unidade
@@ -111,7 +114,7 @@
           </p>
           <div
             style="
-              background:none;
+              background: none;
               padding: 10px;
               display: flex;
               justify-content: center;
@@ -196,7 +199,7 @@
                   height: 32px;
                 "
               >
-                <i class="bx bx-search-alt-2" style="font-size: 18px"></i>
+                <i class="ti ti-search" style="font-size: 16px"></i>
               </div>
               <h3
                 class="dif-titulo"
@@ -244,7 +247,7 @@
                   height: 32px;
                 "
               >
-                <i class="bx bx-cut" style="font-size: 18px"></i>
+                <i class="ti ti-cut" style="font-size: 16px"></i>
               </div>
               <h3
                 class="dif-titulo"
@@ -292,7 +295,7 @@
                   height: 32px;
                 "
               >
-                <i class="bx bx-task" style="font-size: 18px"></i>
+                <i class="ti ti-clipboard" style="font-size: 16px"></i>
               </div>
               <h3
                 class="dif-titulo"
@@ -394,7 +397,7 @@
             style="--stagger-index: 1"
           >
             <div class="bento-circle"></div>
-            <i class="fa-solid fa-rocket"></i>
+            <i class="ti ti-rocket"></i>
             <div>
               <div class="sec-tag">Compromisso</div>
               <h3>Missão</h3>
@@ -411,10 +414,7 @@
             class="bento-card card-visao scroll-reveal stagger"
             style="--stagger-index: 2"
           >
-            <i
-              class="fa-solid fa-mountain-sun"
-              style="-webkit-text-fill-color: white"
-            ></i>
+            <i class="ti ti-mountain" style="color: white"></i>
             <div>
               <div class="sec-tag">Direção</div>
               <h3>Visão</h3>
@@ -433,7 +433,7 @@
             class="bento-card card-valores scroll-reveal stagger"
             style="--stagger-index: 3"
           >
-            <i class="fa-solid fa-gem"></i>
+            <i class="ti ti-diamond"></i>
             <div style="flex: 1">
               <div class="sec-tag">Nossa Base</div>
               <h3>Nossos Valores</h3>
@@ -466,13 +466,13 @@
           </p>
           <div class="footer-socials">
             <a href="#" aria-label="Instagram"
-              ><i class="bx bxl-instagram"></i
+              ><i class="ti ti-brand-instagram"></i
             ></a>
             <a href="#" aria-label="Facebook"
-              ><i class="bx bxl-facebook-circle"></i
+              ><i class="ti ti-brand-facebook"></i
             ></a>
             <a href="https://wa.me/5591985974371" aria-label="WhatsApp"
-              ><i class="bx bxl-whatsapp"></i
+              ><i class="ti ti-brand-whatsapp"></i
             ></a>
           </div>
         </div>
@@ -489,34 +489,41 @@
         </div>
 
         <div class="footer-col">
-          <h4 class="footer-title">Fale Conosco</h4>
+          <h4 class="footer-title">Atendimento</h4>
           <ul class="footer-contact">
-            <li>
-              <i class="bx bx-map"></i> Av. Costa e Silva n° 225, Benevides - PA
-            </li>
-            <li><i class="bx bx-phone"></i> (91) 9 8591-1141</li>
-            <li><i class="bx bx-envelope"></i> Fabiogascontato@gmail.com</li>
-            <li><i class="bx bx-time-five"></i> Seg-Sex: 08h às 19h</li>
+            <li><i class="ti ti-map-pin"></i> Av. Costa e Silva n° 225, Benevides - PA</li>
+            <li><i class="ti ti-phone"></i> (91) 9 8591-1141</li>
+            <li><i class="ti ti-mail"></i> Fabiogascontato@gmail.com</li>
+            <li><i class="ti ti-clock"></i> Seg–Sex: 8h às 19h · Sáb: 8h às 12h</li>
           </ul>
         </div>
       </div>
       <div class="footer-bottom">
         <div class="container">
           <p class="footer-copy">
-            © 2024 Fabão Comércio e Distribuição LTDA · Todos os direitos
-            reservados.
+            © 2024 Fabão Comércio e Distribuição LTDA · CNPJ 42.630.523/0001-61
           </p>
         </div>
       </div>
     </footer>
 
-    <!-- FLOATING ELEMENTS -->
+    <!-- ELEMENTOS FLUTUANTES -->
+    <a
+      href="https://www.google.com/maps/place/Fabão+Comércio+e+Distribuição+LTDA/"
+      target="_blank"
+      class="map-float"
+      title="Ver localização"
+    >
+      <i class="ph-fill ph-map-pin-line" style="font-size: 24px"></i>
+    </a>
+
     <a
       href="https://wa.me/5591985974371"
+      target="_blank"
       class="wpp-float"
       title="Fale com um consultor"
     >
-      <i class="bx bxl-whatsapp" style="font-size: 30px; color: white"></i>
+      <i class="ph-fill ph-whatsapp-logo" style="font-size: 30px; color: white"></i>
     </a>
 
     <script>
