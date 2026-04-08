@@ -8,14 +8,14 @@
       content="Veja nossa linha de pallets PBR, Euro, longarinas e chapas. Pallets de pinus e eucalipto para transporte, construção e indústria no Pará."
     />
     <meta name="robots" content="index, follow" />
-    <link rel="canonical" href="https://fabaogas.com.br/produtos.html" />
+    <link rel="canonical" href="https://seu-portfolio.com/produtos.html" />
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://fabaogas.com.br/produtos.html" />
+    <meta property="og:url" content="https://seu-portfolio.com/produtos.html" />
     <meta
       property="og:title"
-      content="Catálogo de Pallets PBR e Eucalipto | Fabão Gás"
+      content="Catálogo de Pallets PBR e Eucalipto | Pallet Log"
     />
     <meta
       property="og:description"
@@ -23,12 +23,12 @@
     />
     <meta property="og:image" content="img/Logo.png" />
 
-    <title>Catálogo de Pallets PBR e Eucalipto | Fabão Gás</title>
+    <title>Catálogo de Modelos PBR e Eucalipto | Pallet Log</title>
 
     <link rel="stylesheet" href="css/estilo.css" />
     <link
+      href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;500;600;700;800&family=Barlow:wght@400;500;600&family=Lora:wght@600;700&display=swap"
       rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600&family=Barlow+Condensed:wght@600;700;800&display=swap"
     />
     <!-- Phosphor Icons -->
     <script src="https://unpkg.com/@phosphor-icons/web"></script>
@@ -40,33 +40,40 @@
   </head>
   <body>
     <header class="navbar">
-      <a href="index.html" class="logo">
+      <a
+        href="index.html"
+        class="logo"
+        aria-label="Pallet Log - Ir para a home"
+      >
         <div class="logo-icon">
-          <img src="img/Logo.png" alt="Logo Fabão Gás" width="50px" />
+          <span class="logo-svg"></span>
         </div>
-        <span class="logo-text"><span>FABÃO</span>GÁS</span>
+        <span class="logo-text"><span>PALLET</span>LOG</span>
       </a>
-      <nav id="nav-menu">
-        <a href="index.html">Home</a>
+      <nav>
+        <a href="index.html">Início</a>
         <a href="sobre.html">Sobre</a>
         <a href="produtos.html" class="active">Produtos</a>
         <a href="orcamento.html">Orçamento</a>
         <a href="contato.html">Contato</a>
+        <a href="index.html#faq">FAQ</a>
       </nav>
       <a href="orcamento.html" class="btn-orcamento">Fazer orçamento</a>
-      <button class="hamburger" id="menu-toggle" aria-label="Abrir menu">
-        <span></span><span></span><span></span>
+      <button class="hamburger" aria-label="Abrir menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
       </button>
     </header>
 
-    <section id="produtos" class="scroll-reveal">
+    <section id="produtos" class="bg-industrial-light scroll-reveal">
       <div class="container">
-        <div class="sec-tag">Catálogo completo</div>
-        <h2 class="sec-title">Nossos produtos</h2>
-        <p class="sec-sub">
-          Pallets e derivados para todos os segmentos — alimentos, construção,
-          química e logística.
-        </p>
+        <nav class="breadcrumb breadcrumb-dark">
+          <a href="index.html">Início</a>
+          <i class="ph ph-caret-right"></i>
+          <span>Produtos</span>
+        </nav>
+        <h1 class="sec-title mb-5">Catálogo de <span>Produtos</span></h1>
 
         <div class="search-bar-container">
           <div class="search-wrapper">
@@ -117,10 +124,7 @@
               Padrão ABNT para todo o Brasil. Ideal para logística em geral.
             </p>
             <span class="prod-badge badge-azul">Padrão brasileiro</span>
-            <div
-              class="orc-qtd"
-              style="margin-top: 15px; justify-content: center"
-            >
+            <div class="orc-qtd mt-3 justify-center">
               <button
                 class="qtd-btn"
                 type="button"
@@ -164,10 +168,7 @@
               Alta resistência para materiais de construção e cargas pesadas.
             </p>
             <span class="prod-badge badge-cinza">Construção civil</span>
-            <div
-              class="orc-qtd"
-              style="margin-top: 15px; justify-content: center"
-            >
+            <div class="orc-qtd mt-3 justify-center">
               <button
                 class="qtd-btn"
                 type="button"
@@ -211,10 +212,7 @@
               Ideal para sorvetes, frango e outros produtos em câmara fria.
             </p>
             <span class="prod-badge badge-azul">Câmara fria</span>
-            <div
-              class="orc-qtd"
-              style="margin-top: 15px; justify-content: center"
-            >
+            <div class="orc-qtd mt-3 justify-center">
               <button
                 class="qtd-btn"
                 type="button"
@@ -258,10 +256,7 @@
               Reforçado para produtos químicos, cera e derivados pesados.
             </p>
             <span class="prod-badge badge-vermelho">Químicos</span>
-            <div
-              class="orc-qtd"
-              style="margin-top: 15px; justify-content: center"
-            >
+            <div class="orc-qtd mt-3 justify-center">
               <button
                 class="qtd-btn"
                 type="button"
@@ -305,10 +300,7 @@
               Utilizada para fundos de guarda-roupas e painéis de móveis.
             </p>
             <span class="prod-badge badge-cinza">Derivados</span>
-            <div
-              class="orc-qtd"
-              style="margin-top: 15px; justify-content: center"
-            >
+            <div class="orc-qtd mt-3 justify-center">
               <button
                 class="qtd-btn"
                 type="button"
@@ -351,10 +343,7 @@
               Utilizada para fundos de guarda-roupas e painéis de móveis.
             </p>
             <span class="prod-badge badge-cinza">Derivados</span>
-            <div
-              class="orc-qtd"
-              style="margin-top: 15px; justify-content: center"
-            >
+            <div class="orc-qtd mt-3 justify-center">
               <button
                 class="qtd-btn"
                 type="button"
@@ -398,10 +387,7 @@
               Utilizada para fundos de guarda-roupas e painéis de móveis.
             </p>
             <span class="prod-badge badge-cinza">Derivados</span>
-            <div
-              class="orc-qtd"
-              style="margin-top: 15px; justify-content: center"
-            >
+            <div class="orc-qtd mt-3 justify-center">
               <button
                 class="qtd-btn"
                 type="button"
@@ -444,10 +430,7 @@
               Utilizada para fundos de guarda-roupas e painéis de móveis.
             </p>
             <span class="prod-badge badge-cinza">Derivados</span>
-            <div
-              class="orc-qtd"
-              style="margin-top: 15px; justify-content: center"
-            >
+            <div class="orc-qtd mt-3 justify-center">
               <button
                 class="qtd-btn"
                 type="button"
@@ -474,7 +457,7 @@
           <div
             class="prod-card"
             data-type="novo"
-            data-title="Madeirite"
+            data-title="Madeirite Industrial"
             data-category="Construção"
             data-detail="Painéis de madeirite plastificado ou fenólico. Utilizados em assoalhos de caminhões, construção de caixas de transporte e fôrmas para concreto."
             data-features="Resistência a água; Alta durabilidade; Superfície lisa; Diversas espessuras"
@@ -482,18 +465,15 @@
             <div class="prod-icon">
               <img
                 src="https://images.unsplash.com/photo-1504148455328-c376907d081c?q=80&w=600&auto=format&fit=crop"
-                alt="Maderide"
+                alt="Madeirite"
               />
             </div>
-            <div class="prod-nome">Maderide</div>
+            <div class="prod-nome">Madeirite</div>
             <p class="prod-uso">
               Utilizada para fundos de guarda-roupas e painéis de móveis.
             </p>
             <span class="prod-badge badge-cinza">Derivados</span>
-            <div
-              class="orc-qtd"
-              style="margin-top: 15px; justify-content: center"
-            >
+            <div class="orc-qtd mt-3 justify-center">
               <button
                 class="qtd-btn"
                 type="button"
@@ -548,9 +528,9 @@
         <div class="footer-col">
           <a href="index.html" class="logo">
             <div class="logo-icon">
-              <img src="img/Logo.png" alt="Logo Fabão Gás" width="40" />
+              <span class="logo-svg"></span>
             </div>
-            <span class="logo-text"><span>FABÃO</span>GÁS</span>
+            <span class="logo-text"><span>PALLET</span>LOG</span>
           </a>
           <p class="footer-desc">
             Sua parceira estratégica em pallets industriais em Benevides e
@@ -596,7 +576,7 @@
       <div class="footer-bottom">
         <div class="container">
           <p class="footer-copy">
-            © 2024 Fabão Comércio e Distribuição LTDA · CNPJ 42.630.523/0001-61
+            © 2024 [Seu Nome ou Empresa] · CNPJ 00.000.000/0001-00
           </p>
         </div>
       </div>
@@ -629,6 +609,6 @@
       <span>Revisar orçamento</span>
     </a>
 
-    <script src="scripts.js"></script>
+    <script src="js/scripts.js"></script>
   </body>
 </html>

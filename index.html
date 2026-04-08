@@ -3,12 +3,50 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Pallets industriais em Benevides, PA. Orçamento online rápido e entrega expressa. PBR, Euro, longarina, chapa Texi e muito mais.">
-    <meta name="keywords" content="pallets industriais, orçamento de pallets, pallets Benevides, pallets PBR, pallets para exportação, pallets de madeira, pallets para alimentos, pallets para construção">
-    <title>Fabão Gás — Indústria de Pallets em Benevides, PA</title>
+    <meta name="description" content="Projeto de Portfólio: Sistema de catálogo e orçamento online para indústria de pallets.">
+    <meta name="keywords" content="portfólio, pallets industriais, orçamento online, desenvolvimento web">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="img/Logo.png" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://seu-portfolio.com/" />
+    <meta property="og:title" content="Portfólio | Indústria de Pallets" />
+    <meta property="og:description" content="Demonstração de sistema de catálogo e orçamento para logística." />
+    <meta property="og:image" content="img/Logo.png" />
+
+    <!-- Dados Estruturados LocalBusiness -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "Catálogo de Pallets - Portfólio",
+      "image": "img/Logo.png",
+      "@id": "https://seu-portfolio.com/",
+      "url": "https://seu-portfolio.com/",
+      "telephone": "+5591985911141",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Av. Costa e Silva n° 225",
+        "addressLocality": "Benevides",
+        "addressRegion": "PA",
+        "postalCode": "68795-000",
+        "addressCountry": "BR"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -1.3535246,
+        "longitude": -48.2589228
+      },
+      "openingHours": "Mo-Fr 08:00-18:00, Sa 08:00-12:00"
+    }
+    </script>
+
+    <title>Portfólio | Indústria de Pallets</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link
-      href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;500;600;700;800&family=Barlow:wght@400;500&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;500;600;700;800&family=Barlow:wght@400;500;600&family=Lora:wght@600;700&display=swap"
       rel="stylesheet"
     />
 
@@ -28,22 +66,21 @@
   <body>
     <!-- NAVBAR -->
     <header class="navbar">
-      <a href="#" class="logo">
+      <a href="index.html" class="logo" aria-label="Pallet Log - Ir para a home">
         <div class="logo-icon">
-          <img src="img/Logo.png" alt="" width="50px">
+          <span class="logo-svg"></span>
         </div>
-        <span class="logo-text"><span>FABÃO</span>GÁS</span>
+        <span class="logo-text"><span>PALLET</span>LOG</span>
       </a>
       <nav>
-        <a href="index.html" class="active">Home</a>
+        <a href="index.html" class="active">Início</a>
         <a href="sobre.html">Sobre</a>
         <a href="produtos.html">Produtos</a>
         <a href="orcamento.html">Orçamento</a>
         <a href="contato.html">Contato</a>
         <a href="#faq">FAQ</a>
-        <!-- <span class="nav-em-breve">Gás — em breve</span> -->
       </nav>
-      <a href="#orcamento" class="btn-orcamento">Fazer orçamento</a>
+      <a href="orcamento.html" class="btn-orcamento">Fazer orçamento</a>
       <button class="hamburger" aria-label="Abrir menu" aria-expanded="false">
         <span></span>
         <span></span>
@@ -55,7 +92,7 @@
     <section class="hero">
       <div class="hero-inner">
         <div class="hero-content">
-          <div class="hero-tag">Benevides — Pará · Entrega rápida</div>
+          <div class="hero-tag">Logística Industrial · Entrega rápida</div>
           <h1 class="hero-title">
             Pallets de<br />qualidade para<br />sua <span>operação</span>
           </h1>
@@ -64,10 +101,10 @@
             online na hora, pedido direto no WhatsApp.
           </p>
           <div class="hero-btns">
-            <a href="#orcamento" class="btn-hero-primary"
+            <a href="orcamento.html" class="btn-hero-primary"
               >Fazer orçamento agora</a
             >
-            <a href="produtos.html" class="btn-hero-secondary">Fazer orçamento agora</a>
+            <a href="produtos.html" class="btn-hero-secondary">Ver catálogo</a>
           </div>
         </div>
         
@@ -78,68 +115,172 @@
     <!-- STATS -->
     <div class="stats">
       <div class="stat-item">
-        <div class="stat-num">500+</div>
+        <div class="stat-num text-white">500+</div>
         <div class="stat-lbl">Clientes atendidos</div>
       </div>
       <div class="stat-item">
-        <div class="stat-num">7</div>
+        <div class="stat-num text-white">7</div>
         <div class="stat-lbl">Tipos de produto</div>
       </div>
       <div class="stat-item">
-        <div class="stat-num">48h</div>
+        <div class="stat-num text-white">48h</div>
         <div class="stat-lbl">Prazo de entrega</div>
       </div>
       <div class="stat-item">
-        <div class="stat-num">4+</div>
+        <div class="stat-num text-white">4+</div>
         <div class="stat-lbl">Anos de experiência</div>
       </div>
     </div>
-      <!-- DIFERENCIAIS -->
-<section id="sobre" class="scroll-reveal">
-      <div class="container">
-        <div class="sec-tag">Por que Fabão</div>
-        <h2 class="sec-title">Qualidade e agilidade<br />em cada entrega</h2>
-        <p class="sec-sub">
-          Da fábrica em Benevides para todo o Pará. Nosso compromisso é com a
-          sua operação.
-        </p>
-        <div class="dif-grid stagger">
-          <div class="dif-card scroll-reveal stagger">
-            <div class="dif-icon">
-              <i class="ti ti-bolt" style="color: white; font-size: 20px;"></i>
-            </div>
-            <div class="dif-titulo">Entrega expressa</div>
-            <div class="dif-desc">
-              Até 48 horas para Benevides, Belém e região metropolitana do Pará.
-            </div>
+    <!-- DIFERENCIAIS MODERNOS -->
+    <section id="sobre" class="feature-modern-section scroll-reveal">
+      <div class="container feature-modern-wrapper">
+        <div class="feature-visual scroll-reveal">
+          <img src="https://images.unsplash.com/photo-1587293852726-70cdb56c2866?q=80&w=800&auto=format&fit=crop" alt="Fábrica de Pallets" class="feature-img">
+          <div class="feature-experience-card">
+            <span class="exp-number">4+</span>
+            <span class="exp-text">Anos de expertise<br>em Benevides</span>
           </div>
-          <div class="dif-card scroll-reveal stagger">
-            <div class="dif-icon" style="background: var(--vermelho)">
-              <i class="ti ti-shield-check" style="color: white; font-size: 20px;"></i>
+        </div>
+
+        <div class="feature-content">
+          <div class="sec-tag">Por que nos escolher</div>
+          <h2 class="sec-title">Excelência industrial que impulsiona sua logística</h2>
+          <p class="sec-sub">Não apenas fabricamos pallets; entregamos a base sólida para que sua operação nunca pare.</p>
+          
+          <div class="feature-stack">
+            <div class="feature-card-item scroll-reveal">
+              <div class="f-icon-box"><i class="ti ti-truck-delivery"></i></div>
+              <div class="f-text">
+                <h4>Logística Estratégica</h4>
+                <p>Unidade fabril em Benevides com frota própria para garantir o fluxo de abastecimento da sua indústria.</p>
+              </div>
             </div>
-            <div class="dif-titulo">Madeira de qualidade</div>
-            <div class="dif-desc">
-              Pinus e eucalipto selecionados. Opção com tratamento ISPM-15 para
-              exportação.
+
+            <div class="feature-card-item scroll-reveal" style="border-left-color: var(--vermelho);">
+              <div class="f-icon-box" style="background: var(--vermelho)"><i class="ti ti-shield-check"></i></div>
+              <div class="f-text">
+                <h4>Padrão de Qualidade PBR</h4>
+                <p>Conformidade com as normas ABNT, garantindo intercambiabilidade e segurança no empilhamento.</p>
+              </div>
             </div>
-          </div>
-          <div class="dif-card scroll-reveal stagger">
-            <div class="dif-icon">
-              <i class="ti ti-user-cog" style="color: white; font-size: 20px;"></i>
-            </div>
-            <div class="dif-titulo">Atendimento direto</div>
-            <div class="dif-desc">
-              Sem intermediários. Fale direto com quem produz e negocie o melhor
-              preço.
+
+            <div class="feature-card-item scroll-reveal">
+              <div class="f-icon-box"><i class="ti ti-leaf"></i></div>
+              <div class="f-text">
+                <h4>Sustentabilidade Real</h4>
+                <p>Trabalhamos exclusivamente com madeira de reflorestamento e manejo legalizado.</p>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </section>
 
+    <!-- COMO FUNCIONA -->
+    <section id="processo" class="scroll-reveal bg-industrial-dark text-white" style="background: var(--azul-escuro);">
+      <div class="container">
+        <div class="sec-tag text-brand">Simples e Rápido</div>
+        <h2 class="sec-title text-white">Como solicitar seus pallets</h2>
+        <div class="processo-grid stagger">
+          <div class="processo-line"></div>
+          <div class="processo-step scroll-reveal">
+            <div class="step-num">01</div>
+            <h4>Escolha os modelos</h4>
+            <p>Navegue pelo catálogo e adicione os pallets que sua operação precisa ao orçamento.</p>
+          </div>
+          <div class="processo-step scroll-reveal">
+            <div class="step-num">02</div>
+            <h4>Envie o pedido</h4>
+            <p>Revise as quantidades e envie direto para nosso WhatsApp de atendimento comercial.</p>
+          </div>
+          <div class="processo-step scroll-reveal">
+            <div class="step-num">03</div>
+            <h4>Receba no local</h4>
+            <p>Validamos o frete e realizamos a entrega em até 48h para Benevides e região metropolitana.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PRODUTOS EM DESTAQUE -->
+    <section id="vitrine-home" class="bg-industrial-light scroll-reveal">
+      <div class="container">
+        <div class="sec-tag">Catálogo</div>
+        <h2 class="sec-title">Produtos mais solicitados</h2>
+        <p class="sec-sub">Conheça nossos modelos padrão e derivados de alta resistência.</p>
+        
+        <div class="produtos-grid">
+          <!-- Produto 1 -->
+          <div class="prod-card" 
+               data-title="Pallet PBR Novo" 
+               data-category="Padrão brasileiro" 
+               data-detail="O Pallet PBR é o modelo padrão ABNT exigido pela maioria das indústrias e supermercados no Brasil. Ideal para sistemas automatizados e porta-pallets." 
+               data-features="Dimensões: 1200×1000mm; Madeira: Pinus ou Eucalipto; Capacidade Dinâmica: 1200kg; Capacidade Estática: 2500kg">
+            <div class="prod-icon">
+              <img src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?q=80&w=600&auto=format&fit=crop" alt="Pallet PBR" loading="lazy">
+            </div>
+            <div class="prod-nome">Pallet PBR Novo</div>
+            <p class="prod-uso">O padrão oficial do mercado brasileiro. Ideal para sistemas automatizados e porta-pallets.</p>
+            <span class="prod-badge badge-azul">Mais Vendido</span>
+            <button type="button" class="prod-info-btn">Ver detalhes</button>
+          </div>
+
+          <!-- Produto 2 -->
+          <div class="prod-card" 
+               data-title="Pallet de Longarina" 
+               data-category="Cargas Pesadas" 
+               data-detail="Pallet com estrutura de longarinas maciças, permitindo a entrada da empilhadeira por dois ou quatro lados. Muito utilizado no setor químico para suporte de tambores e IBCs." 
+               data-features="Alta estabilidade lateral; Longarinas reforçadas; Ideal para tambores e sacaria pesada; Alta durabilidade">
+            <div class="prod-icon">
+              <img src="https://images.unsplash.com/photo-1580674285054-bed31e145f59?q=80&w=600&auto=format&fit=crop" alt="Pallet Longarina" loading="lazy">
+            </div>
+            <div class="prod-nome">Pallet de Longarina</div>
+            <p class="prod-uso">Estrutura reforçada para cargas pesadas como cimento, química e mineração.</p>
+            <span class="prod-badge badge-vermelho">Alta Carga</span>
+            <button type="button" class="prod-info-btn">Ver detalhes</button>
+          </div>
+
+          <!-- Produto 3 -->
+          <div class="prod-card" 
+               data-title="Chapa Texi / Chapatex" 
+               data-category="Acessório" 
+               data-detail="A chapa Chapatex é um divisor de cargas feito de fibra de madeira de alta densidade. Utilizada para estabilizar camadas de produtos (latas, garrafas) e proteger contra umidade do pallet." 
+               data-features="Dimensões: 1200×1000mm; Espessura: 3mm; Protege contra vibrações; Reutilizável e reciclável">
+            <div class="prod-icon">
+              <img src="https://images.unsplash.com/photo-1505330622279-bf7d7fc918f4?q=80&w=600&auto=format&fit=crop" alt="Chapa Texi" loading="lazy">
+            </div>
+            <div class="prod-nome">Chapa Texi / Chapatex</div>
+            <p class="prod-uso">Proteção e separação de camadas para transporte de bebidas e alimentos ensacados.</p>
+            <span class="prod-badge badge-cinza">Acessório</span>
+            <button type="button" class="prod-info-btn">Ver detalhes</button>
+          </div>
+        </div>
+        <div class="text-center mt-5">
+          <a href="produtos.html" class="btn-hero-secondary" style="color: var(--azul); border-color: var(--azul);">Ver catálogo completo</a>
+        </div>
+      </div>
+    </section>
   
+    <!-- CTA BANNER -->
+    <section class="cta-banner scroll-reveal">
+      <div class="container">
+        <div class="cta-content">
+          <div class="hero-tag mb-3 text-white" style="background: var(--vermelho);">Soluções Sob Medida</div>
+          <h2 class="cta-title">Sua carga merece a segurança dos nossos pallets</h2>
+          <p class="cta-sub">
+            Atendimento personalizado para grandes volumes e projetos industriais. 
+            Entrega rápida para toda a região metropolitana de Belém e Benevides.
+          </p>
+          <div class="cta-btns">
+            <a href="orcamento.html" class="btn-hero-primary">Montar meu orçamento</a>
+            <a href="https://wa.me/5591985974371" class="btn-hero-secondary" target="_blank">Falar com um consultor</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- FAQ -->
-    <section class="faq section alt-bg" id="faq">
+    <section class="faq section alt-bg scroll-reveal" id="faq">
       <div class="container">
         <div class="section-head">
           <span class="sec-tag">FAQ</span>
@@ -147,52 +288,101 @@
         </div>
 
         <div class="faq-list">
-          <details class="faq-item" open>
-            <summary>Como faço um orçamento?</summary>
-            <p>Você pode solicitar diretamente pelo site ou pelo WhatsApp informando quantidade e tipo de pallet.</p>
+          <details class="faq-item scroll-reveal stagger">
+            <summary>Como solicito um orçamento personalizado?</summary>
+            <p>Basta navegar pelo nosso catálogo, adicionar os itens desejados ao orçamento e clicar em "Enviar via WhatsApp". Nossa equipe comercial responderá com os valores e prazos em poucos minutos.</p>
           </details>
-          <details class="faq-item">
-            <summary>Posso trocar os produtos depois?</summary>
-            <p>Sim. Basta editar os textos no arquivo principal.</p>
+          <details class="faq-item scroll-reveal stagger">
+            <summary>Vocês possuem pallets para exportação?</summary>
+            <p>Sim! Produzimos pallets com tratamento fitossanitário HT (High Temperature) seguindo a norma NIMF 15, garantindo a certificação necessária para embarques internacionais.</p>
           </details>
-          <details class="faq-item">
-            <summary>Quais tipos de pallets vocês vendem?</summary>
-            <p>Trabalhamos com pallets de pinho, eucalipto e pallets reciclados, ideais para transporte, armazenamento e decoração.</p>
+          <details class="faq-item scroll-reveal stagger">
+            <summary>Qual a capacidade de carga dos pallets PBR?</summary>
+            <p>Nossos pallets padrão PBR são fabricados para suportar até 1.200kg em movimentação (dinâmica) e até 2.500kg quando empilhados em porta-pallets (estática).</p>
           </details>
-          <details class="faq-item">
-            <summary>Os pallets são novos ou usados?</summary>
-            <p>Temos opções novas e usadas. Os usados passam por revisão antes da venda.</p>
+          <details class="faq-item scroll-reveal stagger">
+            <summary>Qual o prazo de entrega para Benevides e Belém?</summary>
+            <p>Para produtos em estoque, realizamos a entrega expressa em até 48 horas úteis em toda a região metropolitana. Para projetos sob medida, o prazo é acordado no fechamento do pedido.</p>
           </details>
-          <details class="faq-item">
-            <summary>Posso retirar no local?</summary>
-            <p>Sim, a retirada pode ser feita mediante agendamento.</p>
+          <details class="faq-item scroll-reveal stagger">
+            <summary>Trabalham com pallets reformados?</summary>
+            <p>Sim, possuímos uma linha de pallets reformados que passam por rigorosa inspeção de segurança, oferecendo uma opção econômica e sustentável para sua logística.</p>
           </details>
+        </div>
+        <div class="faq-footer">
+          <p>Ainda tem alguma dúvida específica?</p>
+          <a href="https://wa.me/5591985974371" target="_blank">Fale agora com um especialista <i class="ph ph-arrow-right"></i></a>
         </div>
       </div>
     </section>
 
     <!-- DEPOIMENTOS -->
-    <section id="depoimentos">
+    <section id="depoimentos" class="scroll-reveal">
       <div class="container">
-        <h2 class="sec-title">O que nossos clientes dizem</h2>
+        <div class="section-head text-center mb-5">
+          <span class="sec-tag text-brand">Depoimentos</span>
+          <h2 class="sec-title text-white">O que nossos clientes dizem</h2>
+        </div>
         
         <!-- Swiper -->
         <div class="swiper depo-swiper">
           <div class="swiper-wrapper">
             
             <div class="swiper-slide">
-              <p>"Entrega rápida e pallets de excelente qualidade. Recomendo!"</p>
-              <span>- João, Transportadora Pará</span>
+              <div class="depo-card">
+                <div class="depo-quote"><i class="ti ti-quote"></i></div>
+                <div class="rating-stars">
+                  <i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i>
+                </div>
+                <p>"Entrega rápida e pallets de excelente qualidade. A estrutura é muito resistente, ideal para nossa operação logística. Recomendo!"</p>
+                <div class="depo-user">
+                  <div class="user-avatar">
+                    <img src="https://i.pravatar.cc/150?u=joao" alt="João Silva">
+                  </div>
+                  <div class="user-info">
+                    <strong>João Silva</strong>
+                    <span>Gerente Logístico · Transportadora Pará</span>
+                  </div>
+                </div>
+              </div>
             </div>
             
             <div class="swiper-slide">
-              <p>"Atendimento direto e preço justo. Sempre compramos aqui."</p>
-              <span>- Maria, Indústria Alimentícia</span>
+              <div class="depo-card">
+                <div class="depo-quote"><i class="ti ti-quote"></i></div>
+                <div class="rating-stars">
+                  <i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i>
+                </div>
+                <p>"Atendimento direto e preço justo. É difícil encontrar fornecedores tão comprometidos com o prazo no Pará como a Fabão Gás."</p>
+                <div class="depo-user">
+                  <div class="user-avatar">
+                    <img src="https://i.pravatar.cc/150?u=maria" alt="Maria Oliveira">
+                  </div>
+                  <div class="user-info">
+                    <strong>Maria Oliveira</strong>
+                    <span>Compras · Indústria Alimentícia</span>
+                  </div>
+                </div>
+              </div>
             </div>
             
             <div class="swiper-slide">
-              <p>"Os pallets chegaram em perfeito estado e dentro do prazo."</p>
-              <span>- Carlos, Construção Civil</span>
+              <div class="depo-card">
+                <div class="depo-quote"><i class="ti ti-quote"></i></div>
+                <div class="rating-stars">
+                  <i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i>
+                </div>
+                <p>"Os pallets chegaram em perfeito estado e dentro do prazo. A madeira é de primeira, sem farpas e muito bem montada."</p>
+                <div class="depo-user">
+                  <div class="user-avatar">
+                    <img src="https://i.pravatar.cc/150?u=carlos" alt="Carlos Eduardo">
+                  </div>
+                  <div class="user-info">
+                    <strong>Carlos Eduardo</strong>
+                    <span>Engenheiro · Construção Civil</span>
+                  </div>
+                </div>
+              </div>
             </div>
             
           </div>
@@ -229,19 +419,7 @@ Atuando no mercado desde 2021 com vendas, logística e distribuição em Benevid
               <div>
                 <div class="contato-lbl">Endereço comercial</div>
                 <div class="contato-val">
-                  Av. Costa e Silva n° 225, Presidente Médice, Benevides - PA
-                </div>
-              </div>
-            </div>
-
-            <div class="contato-item">
-              <div class="contato-icone">
-                <i class="ti ti-map-pin" style="color: white; font-size: 18px;"></i>
-              </div>
-              <div>
-                <div class="contato-lbl">Endereço depósito</div>
-                <div class="contato-val">
-                  BR 316 km 23,6, Rua das Maçãs, n° 1382
+              [Seu Endereço ou Cidade], Brasil
                 </div>
               </div>
             </div>
@@ -253,9 +431,7 @@ Atuando no mercado desde 2021 com vendas, logística e distribuição em Benevid
               <div>
                 <div class="contato-lbl">Fone</div>
                 <div class="contato-val">
-                  <span>(91) 9 8591-1141</span>
-                  <span>(91) 9 8591-5100</span>
-                  <span>(91) 9 8011-8155</span>
+                  <span>(00) 0 0000-0000</span>
                 </div>
               </div>
             </div>
@@ -266,7 +442,7 @@ Atuando no mercado desde 2021 com vendas, logística e distribuição em Benevid
               </div>
               <div>
                 <div class="contato-lbl">E-mail</div>
-                <div class="contato-val">Fabiogascontato@gmail.com</div>
+                <div class="contato-val">seuemail@exemplo.com</div>
               </div>
             </div>
 
@@ -276,7 +452,7 @@ Atuando no mercado desde 2021 com vendas, logística e distribuição em Benevid
               </div>
               <div>
                 <div class="contato-lbl">CNPJ</div>
-                <div class="contato-val">42.630.523/0001-61</div>
+                <div class="contato-val">00.000.000/0001-00</div>
               </div>
             </div>
 
@@ -297,7 +473,7 @@ Atuando no mercado desde 2021 com vendas, logística e distribuição em Benevid
             <div class="mapa-header">
               <i class="ti ti-map-pin" style="color: rgba(255,255,255,.7); font-size: 16px;"></i>
               <div>
-                <div class="mapa-header-txt">Fabão Comércio e Distribuição LTDA — Benevides, PA</div>
+                <div class="mapa-header-txt">Unidade Logística — [Sua Cidade]</div>
                 <div class="mapa-header-sub">
                   Clique para abrir no Google Maps
                 </div>
@@ -305,14 +481,37 @@ Atuando no mercado desde 2021 com vendas, logística e distribuição em Benevid
             </div>
             <div class="mapa-embed">
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.705077355096!2d-48.258922791290146!3d-1.3535245986279563!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x92a458159f49e7cb%3A0x71315702070189a!2sR.%20das%20Ma%C3%A7%C3%A3s%2C%202310%20-%20Benevides%2C%20PA%2C%2068795-000!5e0!3m2!1spt-BR!2sbr!4v1775071288507!5m2!1spt-BR!2sbr" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15954.820253457116!2d-48.25424845!3d-1.3535245999999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x92a459345c22934b%3A0x280e81c15f92305!2sBenevides%2C%20PA!5e0!3m2!1spt-BR!2sbr!4v1710000000000!5m2!1spt-BR!2sbr" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
-          </div>
+        </a>
         </div>
       </div>
    
 
     </section>
+
+    <!-- MODAL DE PRODUTOS (FIXED) -->
+    <div class="modal-overlay" id="product-modal" aria-hidden="true">
+      <div class="modal-content" role="dialog" aria-modal="true">
+        <button class="modal-close" type="button" aria-label="Fechar modal">×</button>
+        <div class="modal-head">
+          <div class="modal-image">
+            <img src="img/Logo.png" alt="Produto">
+          </div>
+          <div>
+            <h3 class="modal-title"></h3>
+            <p class="modal-category prod-badge"></p>
+          </div>
+        </div>
+        <div class="modal-body">
+          <div class="modal-description"><p class="modal-text"></p></div>
+          <div class="modal-details">
+            <h4>Características Técnicas</h4>
+            <ul class="modal-features"></ul>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <!-- FOOTER -->
     <footer>
@@ -320,9 +519,9 @@ Atuando no mercado desde 2021 com vendas, logística e distribuição em Benevid
         <div class="footer-col">
           <a href="index.html" class="logo">
             <div class="logo-icon">
-              <img src="img/Logo.png" alt="Logo Fabão Gás" width="40">
+              <span class="logo-svg"></span>
             </div>
-            <span class="logo-text"><span>FABÃO</span>GÁS</span>
+            <span class="logo-text"><span>PALLET</span>LOG</span>
           </a>
           <p class="footer-desc">
             Sua parceira estratégica em pallets industriais em Benevides e região. 
@@ -349,9 +548,9 @@ Atuando no mercado desde 2021 com vendas, logística e distribuição em Benevid
         <div class="footer-col">
           <h4 class="footer-title">Atendimento</h4>
           <ul class="footer-contact">
-            <li><i class="ti ti-map-pin"></i> Av. Costa e Silva n° 225, Benevides - PA</li>
-            <li><i class="ti ti-phone"></i> (91) 9 8591-1141</li>
-            <li><i class="ti ti-mail"></i> Fabiogascontato@gmail.com</li>
+            <li><i class="ti ti-map-pin"></i> [Seu Endereço aqui]</li>
+            <li><i class="ti ti-phone"></i> (00) 0000-0000</li>
+            <li><i class="ti ti-mail"></i> seuemail@exemplo.com</li>
             <li><i class="ti ti-clock"></i> Seg–Sex: 8h às 19h · Sáb: 8h às 12h</li>
           </ul>
         </div>
@@ -360,14 +559,14 @@ Atuando no mercado desde 2021 com vendas, logística e distribuição em Benevid
       <div class="footer-bottom">
         <div class="container">
           <p class="footer-copy">
-            © 2024 Fabão Comércio e Distribuição LTDA · CNPJ 42.630.523/0001-61
+            © 2024 [Seu Nome ou Empresa] · CNPJ 00.000.000/0001-00
           </p>
         </div>
       </div>
     </footer>
 
     <!-- BOTÃO FLUTUANTE LOCALIZAÇÃO -->
-    <a href="https://www.google.com/maps/place/Fabão+Comércio+e+Distribuição+LTDA/"
+    <a href="https://www.google.com/maps/search/Parque+Industrial+Benevides+PA/"
       target="_blank"
       class="map-float"
       title="Ver localização">
@@ -389,6 +588,7 @@ Atuando no mercado desde 2021 com vendas, logística e distribuição em Benevid
 
     <script>
       var swiper = new Swiper(".depo-swiper", {
+        autoHeight: true,
         loop: true,
         autoplay: {
           delay: 4000,
@@ -406,6 +606,6 @@ Atuando no mercado desde 2021 com vendas, logística e distribuição em Benevid
     </script>
 
 
-    <script src="scripts.js"></script>
+    <script src="js/scripts.js"></script>
   </body>
 </html>

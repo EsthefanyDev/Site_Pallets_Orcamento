@@ -8,14 +8,17 @@
       content="Monte seu pedido de pallets online e envie para nosso WhatsApp. Simulação rápida e preços competitivos para pallets novos e usados em Benevides."
     />
     <meta name="robots" content="index, follow" />
-    <link rel="canonical" href="https://fabaogas.com.br/orcamento.html" />
+    <link rel="canonical" href="https://seu-portfolio.com/orcamento.html" />
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://fabaogas.com.br/orcamento.html" />
+    <meta
+      property="og:url"
+      content="https://seu-portfolio.com/orcamento.html"
+    />
     <meta
       property="og:title"
-      content="Solicitar Orçamento de Pallets Online | Fabão Gás"
+      content="Solicitar Orçamento de Pallets Online | Pallet Log"
     />
     <meta
       property="og:description"
@@ -23,12 +26,12 @@
     />
     <meta property="og:image" content="img/Logo.png" />
 
-    <title>Solicitar Orçamento de Pallets Online | Fabão Gás</title>
+    <title>Solicitar Orçamento de Pallets Online | Pallet Log</title>
 
     <link rel="stylesheet" href="css/estilo.css" />
     <link
+      href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;500;600;700;800&family=Barlow:wght@400;500;600&family=Lora:wght@600;700&display=swap"
       rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600&family=Barlow+Condensed:wght@600;700;800&display=swap"
     />
     <!-- Phosphor Icons -->
     <script src="https://unpkg.com/@phosphor-icons/web"></script>
@@ -40,28 +43,40 @@
   </head>
   <body>
     <header class="navbar">
-      <a href="index.html" class="logo">
+      <a
+        href="index.html"
+        class="logo"
+        aria-label="Pallet Log - Ir para a home"
+      >
         <div class="logo-icon">
-          <img src="img/Logo.png" alt="Logo" width="50" />
+          <span class="logo-svg"></span>
         </div>
-        <span class="logo-text"><span>FABÃO</span>GÁS</span>
+        <span class="logo-text"><span>PALLET</span>LOG</span>
       </a>
-      <nav id="nav-menu">
-        <a href="index.html">Home</a>
+      <nav>
+        <a href="index.html">Início</a>
         <a href="sobre.html">Sobre</a>
         <a href="produtos.html">Produtos</a>
         <a href="orcamento.html" class="active">Orçamento</a>
         <a href="contato.html">Contato</a>
+        <a href="index.html#faq">FAQ</a>
       </nav>
-      <button class="hamburger" id="menu-toggle">
-        <span></span><span></span><span></span>
+      <a href="orcamento.html" class="btn-orcamento">Fazer orçamento</a>
+      <button class="hamburger" aria-label="Abrir menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
       </button>
     </header>
 
-    <section id="orcamento" class="scroll-reveal">
+    <section id="orcamento" class="bg-industrial-light scroll-reveal">
       <div class="container">
-        <div class="sec-tag">Finalização</div>
-        <h2 class="sec-title">Revise seu Pedido</h2>
+        <nav class="breadcrumb breadcrumb-dark">
+          <a href="index.html">Início</a>
+          <i class="ph ph-caret-right"></i>
+          <span>Orçamento</span>
+        </nav>
+        <h1 class="sec-title mb-5">Meu <span>Orçamento</span></h1>
 
         <div class="orc-layout">
           <div class="orc-lista" id="lista-orc"></div>
@@ -102,9 +117,9 @@
         <div class="footer-col">
           <a href="index.html" class="logo">
             <div class="logo-icon">
-              <img src="img/Logo.png" alt="Fabão Gás" width="40" />
+              <span class="logo-svg"></span>
             </div>
-            <span class="logo-text"><span>FABÃO</span>GÁS</span>
+            <span class="logo-text"><span>PALLET</span>LOG</span>
           </a>
           <p class="footer-desc">
             Sua parceira estratégica em pallets novos e reformados. Atendimento
@@ -153,7 +168,7 @@
       <div class="footer-bottom">
         <div class="container">
           <p class="footer-copy">
-            © 2024 Fabão Comércio e Distribuição LTDA · CNPJ 42.630.523/0001-61
+            © 2024 [Seu Nome ou Empresa] · CNPJ 00.000.000/0001-00
           </p>
         </div>
       </div>
@@ -161,7 +176,7 @@
 
     <!-- ELEMENTOS FLUTUANTES -->
     <a
-      href="https://www.google.com/maps/place/Fabão+Comércio+e+Distribuição+LTDA/"
+      href="https://www.google.com/maps/search/Parque+Industrial+Benevides+PA/"
       target="_blank"
       class="map-float"
       title="Ver localização"
@@ -169,18 +184,13 @@
       <i class="ph-fill ph-map-pin-line" style="font-size: 24px"></i>
     </a>
 
-    <a
-      href="https://wa.me/5591985974371"
-      target="_blank"
-      class="wpp-float"
-      title="Fale pelo WhatsApp"
-    >
+    <a target="_blank" class="wpp-float" title="Fale pelo WhatsApp">
       <i
         class="ph-fill ph-whatsapp-logo"
         style="font-size: 30px; color: white"
       ></i>
     </a>
 
-    <script src="scripts.js"></script>
+    <script src="js/scripts.js"></script>
   </body>
 </html>

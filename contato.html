@@ -5,17 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="Precisa de pallets? Fale com a Fabão Gás em Benevides. Confira nossos telefones, e-mail e endereço para retirada ou entrega de pedidos no Pará."
+      content="Precisa de pallets? Entre em contato. Confira nossos canais de atendimento para retirada ou entrega de pedidos."
     />
     <meta name="robots" content="index, follow" />
-    <link rel="canonical" href="https://fabaogas.com.br/contato.html" />
+    <link rel="canonical" href="https://seu-portfolio.com/contato.html" />
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://fabaogas.com.br/contato.html" />
+    <meta property="og:url" content="https://seu-portfolio.com/contato.html" />
     <meta
       property="og:title"
-      content="Contato e Localização em Benevides, PA | Fabão Gás"
+      content="Contato e Localização | Pallet Log"
     />
     <meta
       property="og:description"
@@ -23,11 +23,11 @@
     />
     <meta property="og:image" content="img/Logo.png" />
 
-    <title>Contato e Localização em Benevides, PA | Fabão Gás</title>
+    <title>Contato e Localização | Pallet Log</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link
-      href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;500;600;700;800&family=Barlow:wght@400;500&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;500;600;700;800&family=Barlow:wght@400;500;600&family=Lora:wght@600;700&display=swap"
       rel="stylesheet"
     />
     <!-- Phosphor Icons -->
@@ -49,14 +49,14 @@
   <body>
     <!-- NAVBAR -->
     <header class="navbar">
-      <a href="#" class="logo">
+      <a href="index.html" class="logo" aria-label="Pallet Log - Ir para a home">
         <div class="logo-icon">
-          <img src="img/Logo.png" alt="" width="50px" />
+          <span class="logo-svg"></span>
         </div>
-        <span class="logo-text"><span>FABÃO</span>GÁS</span>
+        <span class="logo-text"><span>PALLET</span>LOG</span>
       </a>
       <nav>
-        <a href="index.html">Home</a>
+        <a href="index.html">Início</a>
         <a href="sobre.html">Sobre</a>
         <a href="produtos.html">Produtos</a>
         <a href="orcamento.html">Orçamento</a>
@@ -64,7 +64,7 @@
         <a href="index.html#faq">FAQ</a>
         <!-- <span class="nav-em-breve">Gás — em breve</span> -->
       </nav>
-      <a href="index.html#orcamento" class="btn-orcamento">Fazer orçamento</a>
+      <a href="orcamento.html" class="btn-orcamento">Fazer orçamento</a>
       <button class="hamburger" aria-label="Abrir menu" aria-expanded="false">
         <span></span>
         <span></span>
@@ -74,31 +74,38 @@
 
     <section class="contact-template">
       <div class="container">
-        <span class="hero-tag">Contato</span>
-        <h1>Entre em contato conosco</h1>
+        <div class="contact-hero-content">
+          <nav class="breadcrumb">
+            <a href="index.html">Início</a>
+            <i class="ph ph-caret-right"></i>
+            <span>Canais de Atendimento</span>
+          </nav>
+          <h1 class="scroll-reveal">Fale Conosco e Tire suas <span>Dúvidas</span></h1>
+          <div class="hero-sobre-line scroll-reveal"></div>
+        </div>
       </div>
     </section>
 
     <div class="container">
-      <section class="contact-grid">
+      <section class="contact-grid scroll-reveal stagger">
         <div class="contact-detail">
           <i class="ph-fill ph-map-pin"></i>
           <h3>Localização</h3>
-          <p>R. das Maçãs, 2310 - Benevides, PA, 68795-000<br />Benevides - PA</p>
+          <p>
+            [Seu Endereço], [Bairro]<br />[Sua Cidade] - [UF]
+          </p>
         </div>
 
         <div class="contact-detail">
           <i class="ph-fill ph-phone"></i>
           <h3>Contato</h3>
-          <a href="tel:+5591985911141">(91) 9 8591-1141</a>
-          <a href="tel:+5591985915100">(91) 9 8591-5100</a>
-          <a href="tel:+5591980118155">(91) 9 8011-8155</a>
+          <a href="tel:+5500000000000">(00) 0000-0000</a>
         </div>
 
         <div class="contact-detail">
           <i class="ph-fill ph-envelope"></i>
           <h3>Email</h3>
-          <a href="mailto:Fabiogascontato@gmail.com">Fabiogascontato@gmail.com</a>
+          <a href="mailto:seuemail@exemplo.com">seuemail@exemplo.com</a>
         </div>
 
         <div class="contact-detail">
@@ -109,11 +116,14 @@
       </section>
     </div>
 
-    <section class="form-map-wrapper">
-      <div class="contact-column">
-        <h2 class="contact-col-title">Envie-nos uma mensagem</h2>
-        <p style="color: var(--text-muted); margin-bottom: 30px">
-          Estamos prontos para ajudar com seus pallets e embalagens.
+    <section class="scroll-reveal">
+      <div class="container form-map-wrapper">
+        <div class="contact-column">
+        <h2 class="contact-col-title mt-0">
+          Atendimento Consultivo
+        </h2>
+        <p class="text-muted mb-4" style="line-height: 1.6;">
+          Preencha os campos abaixo e nossa equipe retornará em breve.
         </p>
         <form id="contact-form" class="contact-modern-form">
           <div class="form-row">
@@ -135,12 +145,13 @@
             </div>
           </div>
           <div class="form-group">
-            <input
-              type="text"
-              name="Localidade"
-              placeholder="Cidade ou Bairro para entrega *"
-              required
-            />
+            <select name="Assunto" required>
+              <option value="" disabled selected>Assunto da mensagem *</option>
+              <option value="Orcamento">Cotação de Pallets</option>
+              <option value="Logistica">Dúvidas sobre Logística</option>
+              <option value="Reclamacao">Sugestões ou Reclamações</option>
+              <option value="Outros">Outros Assuntos</option>
+            </select>
           </div>
           <div class="form-group">
             <textarea
@@ -150,8 +161,8 @@
               required
             ></textarea>
           </div>
-          <button type="submit" class="btn-submit">
-            ENVIAR MENSAGEM
+          <button type="submit" class="btn-submit" id="submit-button">
+            <span class="btn-text">ENVIAR MENSAGEM</span>
             <i class="ph ph-paper-plane-tilt" style="margin-left: 10px"></i>
           </button>
         </form>
@@ -159,18 +170,22 @@
       </div>
 
       <div class="contact-map-section">
-        <h2 class="contact-col-title">
+        <h2 class="contact-col-title mt-0">
           <i
             class="ph ph-map-pin-line"
             style="margin-right: 12px; color: var(--azul)"
           ></i
           >Onde estamos
         </h2>
+        <p class="text-muted mb-4" style="font-size: 15px">
+          Localização estratégica em Benevides para agilizar o escoamento
+          logístico.
+        </p>
         <div class="map-container">
           <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.705077355096!2d-48.258922791290146!3d-1.3535245986279563!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x92a458159f49e7cb%3A0x71315702070189a!2sR.%20das%20Ma%C3%A7%C3%A3s%2C%202310%20-%20Benevides%2C%20PA%2C%2068795-000!5e0!3m2!1spt-BR!2sbr!4v1775071288507!5m2!1spt-BR!2sbr"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15954.820253457116!2d-48.25424845!3d-1.3535245999999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x92a459345c22934b%3A0x280e81c15f92305!2sBenevides%2C%20PA!5e0!3m2!1spt-BR!2sbr!4v1710000000000!5m2!1spt-BR!2sbr"
             width="100%"
-            height="450"
+            height="100%"
             style="border: 0"
             allowfullscreen=""
             loading="lazy"
@@ -182,7 +197,7 @@
 
     <!-- BOTÃO FLUTUANTE LOCALIZAÇÃO -->
     <a
-      href="https://www.google.com/maps/place/Fabão+Comércio+e+Distribuição+LTDA/"
+      href="https://www.google.com/maps/place/Pallet+Logistics/"
       target="_blank"
       class="map-float"
       title="Ver localização"
@@ -209,9 +224,9 @@
         <div class="footer-col">
           <a href="index.html" class="logo">
             <div class="logo-icon">
-              <img src="img/Logo.png" alt="Logo Fabão Gás" width="40" />
+              <span class="logo-svg"></span>
             </div>
-            <span class="logo-text"><span>FABÃO</span>GÁS</span>
+            <span class="logo-text"><span>PALLET</span>LOG</span>
           </a>
           <p class="footer-desc">
             Sua parceira estratégica em pallets industriais em Benevides e
@@ -260,13 +275,13 @@
       <div class="footer-bottom">
         <div class="container">
           <p class="footer-copy">
-            © 2024 Fabão Comércio e Distribuição LTDA · CNPJ 42.630.523/0001-61
+            © 2024 [Seu Nome ou Empresa] · CNPJ 00.000.000/0001-00
           </p>
         </div>
       </div>
     </footer>
 
-    <script src="scripts.js"></script>
+    <script src="js/scripts.js"></script>
     <script>
       document.addEventListener("DOMContentLoaded", function () {
         const form = document.getElementById("contact-form");
