@@ -361,7 +361,7 @@ nav a:hover {
   background: rgba(190, 22, 34, 0.25);
   color: #f08090;
   font-family: var(--font-condensed);
-  font-size: 12px;
+  font-size: 14px;
   font-weight: 700;
   letter-spacing: 2px;
   text-transform: uppercase;
@@ -372,7 +372,7 @@ nav a:hover {
 
 .hero-title {
   font-family: var(--font-title);
-  font-size: clamp(32px, 9vw, 64px);
+  font-size: clamp(40px, 10vw, 72px);
   font-weight: 700;
   color: var(--branco);
   line-height: 1;
@@ -385,10 +385,10 @@ nav a:hover {
 }
 
 .hero-sub {
-  font-size: 18px;
+  font-size: 22px;
   color: rgba(255, 255, 255, 0.6);
   margin-bottom: clamp(24px, 5vh, 40px);
-  max-width: 420px;
+  max-width: 500px;
 }
 
 /* ── HERO INTERNO PADRONIZADO (Institucional) ── */
@@ -2633,12 +2633,12 @@ footer {
   }
 
   .hero-title {
-    font-size: clamp(36px, 10vw, 52px);
+    font-size: clamp(42px, 11vw, 60px);
     line-height: 1.1;
   }
 
   .hero-sub {
-    font-size: clamp(16px, 4vw, 18px);
+    font-size: clamp(18px, 5vw, 22px);
   }
 
   .hero-btns {
@@ -3118,7 +3118,7 @@ footer {
   .hero-sub {
     margin-left: auto;
     margin-right: auto;
-    font-size: 15px;
+    font-size: 17px;
   }
 
   .hero-btns {
